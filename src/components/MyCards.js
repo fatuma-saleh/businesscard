@@ -1,5 +1,14 @@
+import { Fragment } from "react";
+
 export default function MyCards(props) {
   return (
-    <p>This is the mycards page of the app</p>
+    <Fragment>
+      <p>name</p>
+      <p>title</p>
+      <p>email</p>
+      <p>phone</p>
+      <p>media</p>
+      <p>company</p>
+    </Fragment>
   )
 }
