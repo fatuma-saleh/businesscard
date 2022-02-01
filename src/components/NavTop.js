@@ -1,13 +1,12 @@
-import react from "react";
 export default function NavTop(props) {
   return (
     <fr>
-      <button>Main Page</button>
-      <button>My Cards</button>
-      <button>Saved Cards</button>
-      <button>New Cards</button>
-      <button>Register</button>
-      <button>Login</button>
+      <button onClick={() => props.onClick("MainPage")}>Main Page</button>
+      <button onClick={() => props.onClick("MyCards")}>My Cards</button>
+      <button onClick={() => props.onClick("")}>Saved Cards</button>
+      <button onClick={() => props.onClick("")}>New Cards</button>
+      <button onClick={() => props.onClick("")}>Register</button>
+      <button onClick={() => props.onClick("")}>Login</button>
     </fr>
   )
 }
