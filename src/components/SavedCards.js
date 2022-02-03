@@ -3,7 +3,12 @@ import { Fragment } from "react";
 export default function SavedCards(props) {
   return (
     <Fragment>
-    <p>These are the saved cards</p>
+      <p>name</p>
+      <p>title</p>
+      <p>email</p>
+      <p>phone</p>
+      <p>media</p>
+      <p>company</p>
     </Fragment>
   )
 }
