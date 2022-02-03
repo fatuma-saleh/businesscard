@@ -16,6 +16,7 @@ export default function Application(props) {
       <section>
         {page === "MainPage" && <MainPage />}
         {page === "MyCards" && <MyCards />}
+        {page === "SavedCards" && <SavedCards />}
       </section>
     </main>
   )
