@@ -10,6 +10,7 @@ export default function NavTop(props) {
       <button onClick={() => props.onClick("")}>Template</button>
       <button onClick={() => props.onClick("")}>Register</button>
       <button onClick={() => props.onClick("")}>Login</button>
+      <button onClick={() => props.onClick("")}>View My Code</button>
     </Fragment>
   )
 }
