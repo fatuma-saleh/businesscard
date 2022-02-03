@@ -1,5 +1,4 @@
-import React from "react";
-import { Fragment } from React;
+import { Fragment } from "react";
 
 export default function SavedCards(props) {
   return (
