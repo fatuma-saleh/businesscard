@@ -5,6 +5,7 @@ import MainPage from "./MainPage";
 import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
 import NewCards from "./NewCards";
+import Template from "./Template";
 
 export default function Application(props) {
   const [page, setPage] = useState("MyCards")
