@@ -23,6 +23,7 @@ export default function Application(props) {
         {page === "SavedCards" && <SavedCards />}
         {page === "NewCards" && <NewCards />}
         {page === "Template" && <Template />}
+        {page === "Register" && <Register />}
       </section>
     </main>
   )
