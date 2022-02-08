@@ -1,7 +1,7 @@
 import Card from "./Card";
 
-export default function MyCards(props) {
-  const myCards = props.myCards.map(card => {
+export default function SavedCards(props) {
+  const savedCards = props.savedCards.map(card => {
     return (
       <Card
         key={card.id}
@@ -11,7 +11,7 @@ export default function MyCards(props) {
   })
   return (
     <ul>
-      {myCards}
+      {savedCards}
     </ul>
   )
 }
