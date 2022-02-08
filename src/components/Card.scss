@@ -1,6 +1,6 @@
 .card {
-  width: 1000px;
-  height: 500px;
+  width: 500px;
+  height: auto;
   margin-top: 1em;
   display: flex;
   border-style: solid;
@@ -12,6 +12,6 @@
 }
 
 .card_photo img {
-  width: 400px;
-  height: 500px;
+  width: 100px;
+  height: 150px;
 }
