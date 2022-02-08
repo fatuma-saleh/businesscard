@@ -8,8 +8,8 @@ export default function NavTop(props) {
       <button onClick={() => props.onClick("SavedCards")}>Saved Cards</button>
       <button onClick={() => props.onClick("")}>New Cards</button>
       <button onClick={() => props.onClick("")}>Template</button>
-      <button onClick={() => props.onClick("")}>Register</button>
-      <button onClick={() => props.onClick("")}>Login</button>
+      <button onClick={() => props.onClick("Register")}>Register</button>
+      <button onClick={() => props.onClick("Login")}>Login</button>
     </Fragment>
   )
 }
