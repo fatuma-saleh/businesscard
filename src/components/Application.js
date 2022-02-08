@@ -5,6 +5,8 @@ import NavTop from "./NavTop";
 import MainPage from "./MainPage";
 import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
+import Login from "./Login";
+import Register from "./Register";
 
 export default function Application(props) {
   
@@ -34,6 +36,8 @@ export default function Application(props) {
         {page === "MainPage" && <MainPage />}
         {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
         {page === "SavedCards" && savedCards[0] && <SavedCards savedCards={savedCards} />}
+        {page === "Login" && <Login/>}
+        {page === "Register" && <Register/>}
       </section>
     </main>
   )
