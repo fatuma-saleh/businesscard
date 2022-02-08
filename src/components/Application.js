@@ -4,20 +4,24 @@ import axios from "axios";
 import NavTop from "./NavTop";
 import MainPage from "./MainPage";
 import MyCards from "./MyCards";
+import SavedCards from "./SavedCards";
 
 export default function Application(props) {
   
   const [page, setPage] = useState("MyCards")
   
-  const [cards, setCards] = useState([]);
+  const [myCards, setMyCards] = useState([]);
+  const [savedCards, setSavedCards] = useState([]);
   useEffect(() => {
     Promise.all([
-      axios.get("/api/mycards/2")
+      axios.get("/api/mycards/1"),
+      axios.get("/api/savedcards/1")
     ]).then((all) => {
-      setCards(all[0].data);
-      console.log(cards)
+      setMyCards(all[0].data);
+      setSavedCards(all[1].data);
     })
   }, [])
+  console.log(myCards)
 
   return (
     <main>
@@ -28,8 +32,8 @@ export default function Application(props) {
       </nav>
       <section>
         {page === "MainPage" && <MainPage />}
-        {page === "MyCards" && cards[0] && <MyCards card={cards} />}
-        {page === "SavedCards" && <MyCards />}
+        {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
+        {page === "SavedCards" && savedCards[0] && <SavedCards savedCards={savedCards} />}
       </section>
     </main>
   )
