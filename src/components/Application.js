@@ -12,11 +12,12 @@ export default function Application(props) {
   const [myCards, setCards] = useState([]);
   useEffect(() => {
     Promise.all([
-      axios.get("/api/mycards/2")
+      axios.get("/api/mycards/1")
     ]).then((all) => {
       setCards(all[0].data);
     })
   }, [])
+  console.log(myCards)
 
   return (
     <main>
@@ -27,7 +28,7 @@ export default function Application(props) {
       </nav>
       <section>
         {page === "MainPage" && <MainPage />}
-        {page === "MyCards" && myCards[0] && <MyCards cards={myCards} />}
+        {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
         {page === "SavedCards" && <MyCards />}
       </section>
     </main>
