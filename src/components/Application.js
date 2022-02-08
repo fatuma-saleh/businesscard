@@ -12,7 +12,7 @@ export default function Application(props) {
   const [myCards, setCards] = useState([]);
   useEffect(() => {
     Promise.all([
-      axios.get("/api/mycards/1")
+      axios.get("/api/cards/1")
     ]).then((all) => {
       setCards(all[0].data);
     })
