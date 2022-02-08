@@ -1,7 +1,4 @@
-import "./MyCards.scss"
-
 import Card from "./Card";
-
 
 export default function MyCards(props) {
   const myCards = props.myCards.map(card => {
