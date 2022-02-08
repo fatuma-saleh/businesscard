@@ -55,9 +55,8 @@ export default function Card(props) {
               </li>
             </ul>
             <div className="card_options">
-              <a href="display">display QR code</a>
-              <br />
-              <a href="save">save card</a>
+              {props.card.isselfcard && <a href="display">display QR code</a>}
+              {!props.card.isselfcard && <a href="save">save card</a>}
             </div>
           </div>
         </div>
