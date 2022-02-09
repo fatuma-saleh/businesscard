@@ -4,10 +4,18 @@ import axios from "axios";
 export default function Login(props) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const onLogin = function () {
-   
-    axios.post("/api/login")
+
+  const onLogin = async function () {
+    // console.log("@@@@@", password)
+   try {
+     const { data } = await axios.post("/api/login", { email, password })
+     console.log("data++++", data)
+     localStorage.setItem('user', JSON.stringify(data.user) );
+   } catch (error) {
+     console.log(error)
+   }  
   };
+
   return (
     <section>
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
@@ -22,7 +30,7 @@ export default function Login(props) {
           />
         </div>
 
-        <div>
+        <div> 
           <label for="firstName">Password </label>
           <input
             name="password"
