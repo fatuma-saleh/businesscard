@@ -34,21 +34,21 @@ export default function Application(props) {
     if (!headers){
       return
     }
-    console.log("herader__", headers);
-    axios.get("http://localhost:8001/api/mycards", headers)
-    .then(result => {
-      console.log("allll++", result);
-      setMyCards(result.data);
-    })
+    // console.log("herader__", headers);
+    // axios.get("http://localhost:8001/api/mycards", headers)
+    // .then(result => {
+    //   console.log("allll++", result);
+    //   setMyCards(result.data);
+    // })
     
-    // Promise.all([
-    //   axios.get("http://localhost:8001/api/mycards", headers),
-    //  axios.get("/api/savedcards", headers)
-    // ]).then((all) => {
-    //   console.log("allll++", all);
-    //   setMyCards(all[0].data);
-    //   setSavedCards(all[1].data);
-    // });
+    Promise.all([
+      axios.get("/api/mycards", headers),
+     axios.get("/api/savedcards", headers)
+    ]).then((all) => {
+      //console.log("allll++", all);
+      setMyCards(all[0].data);
+      setSavedCards(all[1].data);
+    });
   }, []);
   
 
