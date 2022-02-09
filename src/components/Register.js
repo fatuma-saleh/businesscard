@@ -6,10 +6,18 @@ export default function Register(props) {
   const [lastName, setlastName] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const onRegister = function () {
-    console.log(firstName);
-    axios.post("/api/register")
-  };
+  
+    const onRegister = async function () {
+      // console.log("@@@@@", password)
+     try {
+       const { data } = await axios.post("/api/register", { firstName, lastName, email, password })
+       console.log("data++++", data)
+       localStorage.setItem('user', JSON.stringify(data.user) );
+     } catch (error) {
+       console.log(error)
+     }  
+    };
+  
   return (
     <section>
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
