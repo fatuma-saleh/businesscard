@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import Card from "./Card";
 
 export default function MyCards(props) {
+
+  // useEffect(() => {
+  //  alert("hi")
+  // }, [])
+
   const myCards = props.myCards.map(card => {
     return (
       <Card
@@ -10,8 +16,10 @@ export default function MyCards(props) {
     )
   })
   return (
+    <>
+    <h2>Mycards</h2>
     <ul>
       {myCards}
-    </ul>
+    </ul></>
   )
 }
