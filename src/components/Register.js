@@ -13,6 +13,7 @@ export default function Register(props) {
        const { data } = await axios.post("/api/register", { firstName, lastName, email, password })
        console.log("data++++", data)
        localStorage.setItem('user', JSON.stringify(data.user) );
+       props.setCurrentUser(data.user)
        props.setPage("MyCards")
      } catch (error) {
        console.log(error)
