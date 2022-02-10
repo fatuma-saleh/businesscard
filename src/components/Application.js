@@ -7,18 +7,23 @@ import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
 import Login from "./Login";
 import Register from "./Register";
+import Logout from "./Logout";
 
 export default function Application(props) {
   const [page, setPage] = useState("MyCards");
 
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
+  
 
   const getHeader = function () {
     let user = localStorage.getItem('user');
     // console.log("*****", user)
+    
     if (!user){
-      return null
+       return null
+      // setPage("")
+      // setPage("Login")
     }
     user = JSON.parse(user)
     
@@ -64,7 +69,9 @@ export default function Application(props) {
           <SavedCards savedCards={savedCards} />
         )}
         {page === "Login" && <Login />}
-        {page === "Register" && <Register />}
+        {page === "Register" && <Register setPage={setPage} />}
+        {page === "Logout" && <Logout setPage={setPage} />}
+    
       </section>
     </main>
   );
