@@ -2,3 +2,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.button-container button {
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.button-container button:hover {
+  background-color: rgb(228, 228, 228);
+}
