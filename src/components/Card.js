@@ -1,4 +1,6 @@
 import "./Card.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 // bio: "bio"
 // card_id: 2
@@ -36,6 +38,7 @@ export default function Card(props) {
             </div>
             <ul className="card_list">
               <li className="card_list-item">
+                <FontAwesomeIcon icon={faPhone} />
                 <a href={"tel:" + props.card.phone}>{props.card.phone}</a>
               </li>
               <li className="card_list-item">
