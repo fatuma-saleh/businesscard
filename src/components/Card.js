@@ -64,8 +64,10 @@ export default function Card(props) {
               </tr>
             </table>
             <div className="card_options">
+              <button>
               {props.card.isselfcard && <a href="display">Display QR Code</a>}
               {!props.card.isselfcard && <a href="save">Save Card</a>}
+              </button>
             </div>
           </div>
         </div>
