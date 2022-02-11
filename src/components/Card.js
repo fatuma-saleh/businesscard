@@ -57,6 +57,12 @@ export default function Card(props) {
                 <a href={props.card.facebook}>{props.card.instagram}</a>
               </li>
             </ul>
+            <table>
+              <tr>
+                <td><FontAwesomeIcon icon={faPhone} /></td>
+                <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+              </tr>
+            </table>
             <div className="card_options">
               {props.card.isselfcard && <a href="display">Display QR Code</a>}
               {!props.card.isselfcard && <a href="save">Save Card</a>}
