@@ -57,12 +57,12 @@ export default function Card(props) {
                 <a href={props.card.facebook}>{props.card.instagram}</a>
               </li>
             </ul>
-            <table>
-              <tr>
+            <table className="card_list">
+              <tr className="card_list-item">
                 <td><FontAwesomeIcon icon={faPhone} /></td>
                 <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
               </tr>
-              <tr>
+              <tr className="card_list-item">
                 <td><FontAwesomeIcon icon={faAt} /></td>
                 <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
               </tr>
