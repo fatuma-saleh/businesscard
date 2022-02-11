@@ -43,3 +43,8 @@ body {
   color: rgb(66, 66, 66);
   text-decoration: underline;
 }
+
+.card_list-item a:active {
+  color: rgb(143, 143, 143);
+  text-decoration: underline;
+}
