@@ -19,7 +19,7 @@ export default function Login(props) {
   };
 
   return (
-    <section>
+    <section className="login">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
         <div>
           <label for="email">Email </label>
