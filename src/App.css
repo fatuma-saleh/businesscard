@@ -13,6 +13,7 @@ body {
   background-color: transparent;
   padding: 10px;
   transition: 0.3s ease-in-out;
+  font-size: 1em;
 }
 
 .button-container button:hover {
@@ -70,4 +71,8 @@ body {
 
 .icon-instagram {
   color: #db3073;
+}
+
+.icon-at {
+  color: rgb(153, 0, 0);
 }

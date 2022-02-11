@@ -43,7 +43,7 @@ export default function Card(props) {
                 <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
               </tr>
               <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faAt} /></td>
+                <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
                 <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
               </tr>
               <tr className="card_list-item">
