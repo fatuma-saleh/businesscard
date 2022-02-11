@@ -25,6 +25,12 @@ nav b {
   background-color: rgb(228, 228, 228);
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .mycards-heading {
   text-align: center;
 }
