@@ -35,9 +35,13 @@ body {
 }
 
 .card_options button {
+  padding: 5px;
+  font-size: 1em;
+  background-color: blue;
 }
 
 .card_options a {
+  color: white;
   text-decoration: none;
 }
 
