@@ -119,3 +119,8 @@ article {
 .icon-instagram {
   color: #db3073;
 }
+
+td {
+  min-width: 25px;
+  line-height: 1.5;
+}
