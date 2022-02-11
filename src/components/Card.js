@@ -35,22 +35,22 @@ export default function Card(props) {
               <p className="card_organization">{props.card.company}</p>
             </div>
             <ul className="card_list">
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={"tel:" + props.card.phone}>{props.card.phone}</a>
               </li>
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={"mailto:" + props.card.email}>{props.card.email}</a>
               </li>
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={props.card.github}>{props.card.github}</a>
               </li>
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={props.card.linkedin}>{props.card.linkedin}</a>
               </li>
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={props.card.facebook}>{props.card.facebook}</a>
               </li>
-              <li className="card_list-itme">
+              <li className="card_list-item">
                 <a href={props.card.facebook}>{props.card.instagram}</a>
               </li>
             </ul>
