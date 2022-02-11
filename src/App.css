@@ -47,12 +47,20 @@ nav b {
 .card_options button {
   padding: 5px;
   font-size: 1em;
-  background-color: blue;
+  background-color: rgb(209, 209, 209);
+}
+
+.card_options button:hover {
+  background-color: rgb(230, 230, 230);
 }
 
 .card_options a {
-  color: white;
+  color: black;
   text-decoration: none;
+}
+
+.card_options a:hover {
+  text-decoration: underline;
 }
 
 .card_list-item a {
@@ -61,7 +69,6 @@ nav b {
 }
 
 .card_list-item a:hover {
-  color: rgb(66, 66, 66);
   text-decoration: underline;
 }
 
