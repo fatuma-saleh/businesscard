@@ -30,7 +30,7 @@ export default function Card(props) {
         <div className="card_body">
           <div className="card_content">
             <div className="card_heading">
-              <h5 className="card_name">{`${props.card.fullname}`}</h5>
+              <h3 className="card_name">{`${props.card.fullname}`}</h3>
               <p className="card_title">{props.card.title}</p>
               <p className="card_organization">{props.card.company}</p>
             </div>
