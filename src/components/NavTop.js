@@ -31,9 +31,11 @@ export default function NavTop({currentUser,onClick,setCurrentUser}) {
       ) : (
         <>
           {" "}
+          <div className={"button-container"}>
           <button onClick={() => onClick("MainPage")}>Main Page</button>
           <button onClick={() => onClick("Register")}>Register</button>
           <button onClick={() => onClick("Login")}>Login</button>
+          </div>
         </>
       )}
     </Fragment>
