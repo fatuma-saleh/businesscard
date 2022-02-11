@@ -22,3 +22,9 @@ body {
 .card_body {
   margin-left: 20px;
 }
+
+.card_photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
