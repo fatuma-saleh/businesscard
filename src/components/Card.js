@@ -1,6 +1,7 @@
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 // bio: "bio"
 // card_id: 2
@@ -67,7 +68,7 @@ export default function Card(props) {
                 <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
               </tr>
               <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={"fa-brands fa-github"} /></td>
+                <td><FontAwesomeIcon icon={faGithub} /></td>
                 <td><a href={props.card.github}>{props.card.github}</a></td>
               </tr>
             </table>
