@@ -28,3 +28,7 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.card_options {
+  padding-bottom: 1.67em;
+}
