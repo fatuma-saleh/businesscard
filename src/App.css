@@ -34,6 +34,13 @@ body {
   padding-bottom: 1.67em;
 }
 
+.card_options button {
+}
+
+.card_options a {
+  text-decoration: none;
+}
+
 .card_list-item a {
   color: black;
   text-decoration: none;
