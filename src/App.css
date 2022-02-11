@@ -35,6 +35,11 @@ ul {
   justify-content: center;
 }
 
+.main-page {
+  display: flex;
+  justify-content: center;
+}
+
 .login, .register {
   padding: 40px 30%;
   line-height: 2;
