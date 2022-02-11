@@ -55,7 +55,7 @@ export default function Card(props) {
                 <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
               </tr>
               <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faFacebook} /></td>
+                <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
                 <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
               </tr>
               <tr className="card_list-item">
