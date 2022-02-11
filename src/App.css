@@ -18,3 +18,7 @@ body {
 .button-container button:hover {
   background-color: rgb(228, 228, 228);
 }
+
+.card_body {
+  margin-left: 20px;
+}
