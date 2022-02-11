@@ -1,6 +1,6 @@
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 
 // bio: "bio"
 // card_id: 2
@@ -61,6 +61,10 @@ export default function Card(props) {
               <tr>
                 <td><FontAwesomeIcon icon={faPhone} /></td>
                 <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+              </tr>
+              <tr>
+                <td><FontAwesomeIcon icon={faAt} /></td>
+                <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
               </tr>
             </table>
             <div className="card_options">
