@@ -59,7 +59,7 @@ export default function Card(props) {
                 <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
               </tr>
               <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faInstagram} /></td>
+                <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
                 <td><a href={props.card.facebook}>{props.card.instagram}</a></td>
               </tr>
             </table>
