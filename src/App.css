@@ -35,6 +35,16 @@ ul {
   justify-content: center;
 }
 
+.login, .register {
+  padding: 40px 30%;
+  line-height: 2;
+}
+
+.login button, .register button {
+  font-size: 1em;
+  margin: 20px 30%;
+}
+
 article {
   display: flex;
   justify-content: center;
