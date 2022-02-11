@@ -1,6 +1,6 @@
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faAt, faGithub } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 
 // bio: "bio"
 // card_id: 2
