@@ -60,18 +60,25 @@ export default function Card(props) {
               </tr>
               <tr className="card_list-item">
                 <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
-                <td><a href={props.card.facebook}>{props.card.instagram}</a></td>
+                <td><a href={props.card.instagram}>{props.card.instagram}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
+                <td><p>{props.card.bio}</p></td>
               </tr>
             </table>
             <div className="card_options">
               <button>
               {props.card.isselfcard && <a href="display">Display QR Code</a>}
-              {!props.card.isselfcard && <a href="save">Save Card</a>}
               </button>
             </div>
           </div>
         </div>
       </div>
+      <footer>
+        {props.card.isselfcard && <a href="edit">edit card<br/></a>}
+        <a href="delete">delete card</a>
+      </footer>
     </article>
   )
 } 

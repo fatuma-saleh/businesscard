@@ -7,6 +7,8 @@ import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
 import Login from "./Login";
 import Register from "./Register";
+import QR from "./QR";
+import NewCard from "./NewCard";
 
 
 export default function Application(props) {
@@ -70,13 +72,14 @@ export default function Application(props) {
       </nav>
       <section className="main">
         {page === "MainPage" && <MainPage />}
+        {page === "QR" && <QR card={myCards[0]} />}
         {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
         {page === "SavedCards" && savedCards[0] && (
           <SavedCards savedCards={savedCards} />
         )}
         {page === "Login" && <Login setCurrentUser={setCurrentUser} setPage={setPage}/>}
         {page === "Register" && <Register setPage={setPage} setCurrentUser={setCurrentUser} />}
-        
+        {page === "NewCard" && <NewCard />}
     
       </section>
     </main>

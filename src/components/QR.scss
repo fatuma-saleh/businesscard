@@ -1,0 +1,17 @@
+.card {
+  width: 500px;
+  height: auto;
+  margin-top: 1em;
+  display: flex;
+  border-style: solid;
+  border-color: black;
+}
+
+.card_photo {
+  justify-content: flex-start;
+}
+
+.card_photo img {
+  width: 100px;
+  height: 150px;
+}
