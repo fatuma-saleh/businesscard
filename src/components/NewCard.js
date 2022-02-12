@@ -15,9 +15,9 @@ import axios from "axios";
 // bio,
 
 export default function NewCard(props) {
-
-  const [card, setCard] = useState({userid: 1})
-
+  
+  const [card, setCard] = useState({})
+  
   const handleChange = e => {
     const { name, value } = e.target;
     setCard(prev => ({
@@ -28,8 +28,23 @@ export default function NewCard(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.put("/api/cards", { card })
-    .then(alert("haha"))
+    const headers = {
+      headers: { Authorization: `Bearer ${props.currentUser.token}`}
+    };
+    axios.post("http://localhost:8001/api/cards", { card } , headers)
+    .then(r => {
+      let newCards = [
+        ...props.myCards,
+        {
+          ...card,
+          id: r.data.id,
+          isselfcard: true
+        }
+      ]
+      console.log(newCards)
+      props.setMyCards(newCards)
+    })
+    .catch(e => console.log(e))
   }
 
   return (

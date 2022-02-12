@@ -56,12 +56,15 @@ export default function Application(props) {
     
     Promise.all([
       axios.get("/api/mycards", headers),
-     axios.get("/api/savedcards", headers)
-    ]).then((all) => {
-      //console.log("allll++", all);
+      axios.get("/api/savedcards", headers),
+      // axios.post("http://localhost:8001/api/cardss", headers)
+    ])
+    .then((all) => {
+      console.log("allll++", all);
       setMyCards(all[0].data);
       setSavedCards(all[1].data);
-    });
+    })
+    .catch(e => console.log(e))
   }, [currentUser]);
   
 
@@ -79,7 +82,13 @@ export default function Application(props) {
         )}
         {page === "Login" && <Login setCurrentUser={setCurrentUser} setPage={setPage}/>}
         {page === "Register" && <Register setPage={setPage} setCurrentUser={setCurrentUser} />}
-        {page === "NewCard" && <NewCard />}
+        {page === "NewCard" && currentUser && (
+          <NewCard
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+            myCards={myCards}
+          />
+        )}
     
       </section>
     </main>
