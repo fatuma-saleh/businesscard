@@ -68,7 +68,7 @@ export default function Application(props) {
       <nav>
         <NavTop onClick={setPage} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       </nav>
-      <section>
+      <section className="main">
         {page === "MainPage" && <MainPage />}
         {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
         {page === "SavedCards" && savedCards[0] && (

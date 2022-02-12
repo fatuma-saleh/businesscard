@@ -1,4 +1,7 @@
 import "./Card.scss"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 // bio: "bio"
 // card_id: 2
@@ -30,33 +33,41 @@ export default function Card(props) {
         <div className="card_body">
           <div className="card_content">
             <div className="card_heading">
-              <h5 className="card_name">{`${props.card.fullname}`}</h5>
+              <h3 className="card_name">{`${props.card.fullname}`}</h3>
               <p className="card_title">{props.card.title}</p>
               <p className="card_organization">{props.card.company}</p>
             </div>
-            <ul className="card_list">
-              <li className="card_list-itme">
-                <a href={"tel:" + props.card.phone}>{props.card.phone}</a>
-              </li>
-              <li className="card_list-itme">
-                <a href={"mailto:" + props.card.email}>{props.card.email}</a>
-              </li>
-              <li className="card_list-itme">
-                <a href={props.card.github}>{props.card.github}</a>
-              </li>
-              <li className="card_list-itme">
-                <a href={props.card.linkedin}>{props.card.linkedin}</a>
-              </li>
-              <li className="card_list-itme">
-                <a href={props.card.facebook}>{props.card.facebook}</a>
-              </li>
-              <li className="card_list-itme">
-                <a href={props.card.facebook}>{props.card.instagram}</a>
-              </li>
-            </ul>
+            <table className="card_list">
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faPhone} /></td>
+                <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
+                <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faGithub} /></td>
+                <td><a href={props.card.github}>{props.card.github}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faLinkedin} className="icon-linkedin" /></td>
+                <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
+                <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
+              </tr>
+              <tr className="card_list-item">
+                <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
+                <td><a href={props.card.facebook}>{props.card.instagram}</a></td>
+              </tr>
+            </table>
             <div className="card_options">
-              {props.card.isselfcard && <a href="display">display QR code</a>}
-              {!props.card.isselfcard && <a href="save">save card</a>}
+              <button>
+              {props.card.isselfcard && <a href="display">Display QR Code</a>}
+              {!props.card.isselfcard && <a href="save">Save Card</a>}
+              </button>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function Register(props) {
     };
   
   return (
-    <section>
+    <section className="register">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
         <div>
           <label for="firstName">First Name </label>
