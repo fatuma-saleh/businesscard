@@ -57,10 +57,8 @@ export default function Application(props) {
     Promise.all([
       axios.get("/api/mycards", headers),
       axios.get("/api/savedcards", headers),
-      // axios.post("http://localhost:8001/api/cardss", headers)
     ])
     .then((all) => {
-      console.log("allll++", all);
       setMyCards(all[0].data);
       setSavedCards(all[1].data);
     })
@@ -76,7 +74,13 @@ export default function Application(props) {
       <section className="main">
         {page === "MainPage" && <MainPage />}
         {page === "QR" && <QR card={myCards[0]} />}
-        {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
+        {page === "MyCards" && myCards[0] && (
+          <MyCards
+            myCards={myCards}
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+          />
+        )}
         {page === "SavedCards" && savedCards[0] && (
           <SavedCards savedCards={savedCards} />
         )}
@@ -84,9 +88,9 @@ export default function Application(props) {
         {page === "Register" && <Register setPage={setPage} setCurrentUser={setCurrentUser} />}
         {page === "NewCard" && currentUser && (
           <NewCard
+            myCards={myCards}
             currentUser={currentUser}
             setMyCards={setMyCards}
-            myCards={myCards}
           />
         )}
     

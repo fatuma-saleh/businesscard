@@ -22,7 +22,7 @@ export default function NewCard(props) {
     const headers = {
       headers: { Authorization: `Bearer ${props.currentUser.token}`}
     };
-    axios.post("http://localhost:8001/api/cards", { card } , headers)
+    return axios.post("http://localhost:8001/api/cards", { card } , headers)
     .then(r => {
       let newCards = [
         ...props.myCards,

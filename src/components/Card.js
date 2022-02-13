@@ -1,9 +1,25 @@
+import axios from "axios";
+
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 export default function Card(props) {
+
+  const handleDelete = e => {
+    e.preventDefault();
+    const headers = {
+      headers: { Authorization: `Bearer ${props.currentUser.token}`}
+    };
+    return axios.delete(`http://localhost:8001/api/cards/${props.card.id}`, headers)
+    .then(r => {
+      console.log(r)
+      props.deleteCard(props.card.id)
+    })
+    .catch(e => console.log(e))
+  }
+
   return (
     <article>
       <div className="card">
@@ -29,48 +45,49 @@ export default function Card(props) {
               }
             </div>
             <table className="card_list">
-              {props.card.phone &&               
-
+              <tbody> 
+                {props.card.phone &&
+                  <tr className="card_list-item">
+                    <td><FontAwesomeIcon icon={faPhone} /></td>
+                    <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+                  </tr>
+                }
+                {props.card.email &&
+                  <tr className="card_list-item">
+                    <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
+                    <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
+                  </tr>
+                }
+                {props.card.github &&
                 <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faPhone} /></td>
-                  <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+                  <td><FontAwesomeIcon icon={faGithub} /></td>
+                  <td><a href={props.card.github}>{props.card.github}</a></td>
                 </tr>
-              }
-              {props.card.email &&               
-                <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
-                  <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
-                </tr>
-              }
-              {props.card.github &&               
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faGithub} /></td>
-                <td><a href={props.card.github}>{props.card.github}</a></td>
-              </tr>
-              }
-              {props.card.linkedin &&               
-                <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faLinkedin} className="icon-linkedin" /></td>
-                  <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
-                </tr>
-              }
-              {props.card.facebook &&               
-                <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
-                  <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
-                </tr>
-              }
-              {props.card.instagram &&               
-                <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
-                  <td><a href={props.card.instagram}>{props.card.instagram}</a></td>
-                </tr>
-              }
-              {props.card.bio &&               
-                <tr className="card_list-item">
-                  <td><p>{props.card.bio}</p></td>
-                </tr>
-              }
+                }
+                {props.card.linkedin &&
+                  <tr className="card_list-item">
+                    <td><FontAwesomeIcon icon={faLinkedin} className="icon-linkedin" /></td>
+                    <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
+                  </tr>
+                }
+                {props.card.facebook &&
+                  <tr className="card_list-item">
+                    <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
+                    <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
+                  </tr>
+                }
+                {props.card.instagram &&
+                  <tr className="card_list-item">
+                    <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
+                    <td><a href={props.card.instagram}>{props.card.instagram}</a></td>
+                  </tr>
+                }
+                {props.card.bio &&
+                  <tr className="card_list-item">
+                    <td><p>{props.card.bio}</p></td>
+                  </tr>
+                }
+              </tbody>
             </table>
             <div className="card_options">
               <button>
@@ -81,8 +98,12 @@ export default function Card(props) {
         </div>
       </div>
       <footer>
-        {props.card.isselfcard && <a href="edit">edit card<br/></a>}
-        <a href="delete">delete card</a>
+        {props.card.isselfcard &&
+          <div>
+            <button>edit card</button>
+          </div>
+        }
+        <button onClick={handleDelete}>delete card</button>
       </footer>
     </article>
   )

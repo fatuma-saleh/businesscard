@@ -1,12 +1,6 @@
 import { Fragment } from "react";
-import { useEffect, useState } from "react";
 export default function NavTop({currentUser,onClick,setCurrentUser}) {
-  // const [currentUser, setCurrentUser] = useState(null);
-  // useEffect(() => {
-  //   let user = localStorage.getItem("user");
-  //   setCurrentUser(user);
-  // }, []);
-  console.log("curret",currentUser)
+
   const logout = function(){
     localStorage.removeItem('user')
     setCurrentUser(null)
