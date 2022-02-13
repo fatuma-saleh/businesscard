@@ -40,6 +40,10 @@ ul {
   justify-content: center;
 }
 
+.main-logo {
+  max-width: 100%;
+}
+
 .login, .register {
   padding: 40px 30%;
   line-height: 2;
