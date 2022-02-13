@@ -7,6 +7,9 @@ import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
 import Login from "./Login";
 import Register from "./Register";
+import QR from "./QR";
+import NewCard from "./NewCard";
+import EditCard from "./EditCard";
 
 
 export default function Application(props) {
@@ -15,6 +18,7 @@ export default function Application(props) {
 
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
+  const [editCardId, setEditCardId] = useState();
   
 
   // const getHeader = function () {
@@ -53,31 +57,75 @@ export default function Application(props) {
     // })
     
     Promise.all([
-      axios.get("/api/mycards", headers),
-     axios.get("/api/savedcards", headers)
-    ]).then((all) => {
-      //console.log("allll++", all);
+      axios.get("http://localhost:8001/api/mycards", headers),
+      axios.get("http://localhost:8001/api/savedcards", headers),
+    ])
+    .then((all) => {
       setMyCards(all[0].data);
       setSavedCards(all[1].data);
-    });
+    })
+    .catch(e => console.log(e))
   }, [currentUser]);
   
 
   return (
     <main>
+
       <nav>
         <NavTop onClick={setPage} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       </nav>
+
       <section className="main">
-        {page === "MainPage" && <MainPage />}
-        {page === "MyCards" && myCards[0] && <MyCards myCards={myCards} />}
+
+        {page === "MainPage" &&(
+          <MainPage />
+        )}
+
+        {page === "QR" && myCards[0] && (
+          <QR card={myCards[0]} />
+        )}
+
+        {page === "MyCards" && myCards[0] && (
+          <MyCards
+            myCards={myCards}
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+            setPage={setPage}
+            setEditCardId={setEditCardId}
+          />
+        )}
+
         {page === "SavedCards" && savedCards[0] && (
           <SavedCards savedCards={savedCards} />
         )}
-        {page === "Login" && <Login setCurrentUser={setCurrentUser} setPage={setPage}/>}
-        {page === "Register" && <Register setPage={setPage} setCurrentUser={setCurrentUser} />}
-        
-    
+
+        {page === "NewCard" && currentUser && (
+          <NewCard
+            myCards={myCards}
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+            setPage={setPage}
+          />
+        )}
+
+        {page === "EditCard" && currentUser && (
+          <EditCard
+            myCards={myCards}
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+            setPage={setPage}
+            editCardId={editCardId}
+          />
+        )}
+
+        {page === "Login" && (
+          <Login setCurrentUser={setCurrentUser} setPage={setPage}/>
+        )}
+
+        {page === "Register" && (
+          <Register setPage={setPage} setCurrentUser={setCurrentUser} />
+        )}
+
       </section>
     </main>
   );

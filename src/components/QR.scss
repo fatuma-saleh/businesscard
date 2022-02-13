@@ -1,7 +1,5 @@
 .card {
-  max-width: 500px;
-  /* min-width: 300px; */
-  width: 100%;
+  width: 500px;
   height: auto;
   margin-top: 1em;
   display: flex;
@@ -11,7 +9,6 @@
 
 .card_photo {
   justify-content: flex-start;
-  padding-left: 15px;
 }
 
 .card_photo img {
