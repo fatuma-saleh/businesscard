@@ -1,6 +1,8 @@
 export default function CardForm(props) {
   return (
     <form onSubmit={props.handleSubmit}>
+      {props.onCancel && <p>Editing Card</p>}
+      {!props.onCancel && <p>Creating New Card</p>}
       <label>
         Name:
         <input
@@ -102,6 +104,10 @@ export default function CardForm(props) {
       <br />
       </label>
         <input type="submit" value="Submit" />
+      <br />
+        {props.onCancel &&
+          <button onClick={props.onCancel}>Cancel</button>
+        }
     </form>
   )
 }

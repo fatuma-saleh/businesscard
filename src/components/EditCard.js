@@ -49,12 +49,18 @@ const handleSubmit = e => {
         label: 'Cancel',
       }
     ]
-  }); 
+  });  
 }
+
+const onCancel = () => {
+  props.setPage("MyCards")
+}
+
   return (
     <CardForm
       handleChange={handleChange}
       handleSubmit={handleSubmit}
+      onCancel={onCancel}
     />
   )
 }
