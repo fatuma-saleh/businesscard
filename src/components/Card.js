@@ -3,23 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
-// bio: "bio"
-// card_id: 2
-// company: "company2"
-// email: "welid@gmail.com"
-// facebook: "facebook2"
-// first_name: "Welid"
-// fullname: "Welid Semir"
-// github: "github2"
-// id: 2
-// instagram: "instagram2"
-// isselfcard: true
-// last_name: "Semir"
-// linkedln: "linkedin2"
-// phone: "647-544-6892"
-// photo: "https://i.imgur.com/T2WwVfS.png"
-// title: "title2"
-// user_id: 2
 export default function Card(props) {
   return (
     <article>
