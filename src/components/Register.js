@@ -10,7 +10,7 @@ export default function Register(props) {
     const onRegister = async function () {
       // console.log("@@@@@", password)
      try {
-       const { data } = await axios.post("/api/register", { firstName, lastName, email, password })
+       const { data } = await axios.post("http://localhost:8001/api/register", { firstName, lastName, email, password })
        console.log("data++++", data)
        localStorage.setItem('user', JSON.stringify(data.user) );
        props.setCurrentUser(data.user)

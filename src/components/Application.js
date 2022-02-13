@@ -55,8 +55,8 @@ export default function Application(props) {
     // })
     
     Promise.all([
-      axios.get("/api/mycards", headers),
-      axios.get("/api/savedcards", headers),
+      axios.get("http://localhost:8001/api/mycards", headers),
+      axios.get("http://localhost:8001/api/savedcards", headers),
     ])
     .then((all) => {
       setMyCards(all[0].data);

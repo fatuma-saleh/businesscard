@@ -22,7 +22,7 @@ export default function Card(props) {
             };
             return axios.delete(`http://localhost:8001/api/cards/${props.card.id}`, headers)
             .then(r => {
-              console.log(r)
+              console.log(r.data)
               props.deleteCard(props.card.id)
             })
             .catch(e => console.log(e))

@@ -41,6 +41,7 @@ export default function NewCard(props) {
                   isselfcard: true
                 }
               ]
+              console.log(r.data.message)
               props.setMyCards(newCards)
               props.setPage("MyCards");
             })
