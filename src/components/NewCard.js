@@ -41,7 +41,6 @@ export default function NewCard(props) {
           isselfcard: true
         }
       ]
-      console.log(newCards)
       props.setMyCards(newCards)
     })
     .catch(e => console.log(e))
@@ -54,6 +53,7 @@ export default function NewCard(props) {
         <input
           name="fullname"
           type="text"
+          required="required"
           onChange={handleChange}
         />
       </label>

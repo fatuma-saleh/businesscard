@@ -24,48 +24,70 @@ export default function Card(props) {
   return (
     <article>
       <div className="card">
-        <div className="card_photo">
-          <img
-            src={props.card.photo}
-            alt="amator"
-          />
-        </div>
+        {props.card.photo &&
+          <div className="card_photo">
+            <img
+              src={props.card.photo}
+              alt="amator"
+            />
+          </div>
+        }
         <div className="card_body">
           <div className="card_content">
             <div className="card_heading">
-              <h3 className="card_name">{`${props.card.fullname}`}</h3>
-              <p className="card_title">{props.card.title}</p>
-              <p className="card_organization">{props.card.company}</p>
+              {props.card.fullname &&
+                <h3 className="card_name">{`${props.card.fullname}`}</h3>
+              }
+              {props.card.title &&
+                <p className="card_title">{props.card.title}</p>
+              }
+              {props.card.company &&
+                <p className="card_title">{props.card.company}</p>
+              }
             </div>
             <table className="card_list">
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faPhone} /></td>
-                <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
-              </tr>
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
-                <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
-              </tr>
+              {props.card.phone &&               
+
+                <tr className="card_list-item">
+                  <td><FontAwesomeIcon icon={faPhone} /></td>
+                  <td><a href={"tel:" + props.card.phone}>{props.card.phone}</a></td>
+                </tr>
+              }
+              {props.card.email &&               
+                <tr className="card_list-item">
+                  <td><FontAwesomeIcon icon={faAt} className="icon-at" /></td>
+                  <td><a href={"mailto:" + props.card.email}>{props.card.email}</a></td>
+                </tr>
+              }
+              {props.card.github &&               
               <tr className="card_list-item">
                 <td><FontAwesomeIcon icon={faGithub} /></td>
                 <td><a href={props.card.github}>{props.card.github}</a></td>
               </tr>
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faLinkedin} className="icon-linkedin" /></td>
-                <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
-              </tr>
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
-                <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
-              </tr>
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
-                <td><a href={props.card.instagram}>{props.card.instagram}</a></td>
-              </tr>
-              <tr className="card_list-item">
-                <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
-                <td><p>{props.card.bio}</p></td>
-              </tr>
+              }
+              {props.card.linkedin &&               
+                <tr className="card_list-item">
+                  <td><FontAwesomeIcon icon={faLinkedin} className="icon-linkedin" /></td>
+                  <td><a href={props.card.linkedin}>{props.card.linkedin}</a></td>
+                </tr>
+              }
+              {props.card.facebook &&               
+                <tr className="card_list-item">
+                  <td><FontAwesomeIcon icon={faFacebook} className="icon-facebook"/></td>
+                  <td><a href={props.card.facebook}>{props.card.facebook}</a></td>
+                </tr>
+              }
+              {props.card.instagram &&               
+                <tr className="card_list-item">
+                  <td><FontAwesomeIcon icon={faInstagram} className="icon-instagram" /></td>
+                  <td><a href={props.card.instagram}>{props.card.instagram}</a></td>
+                </tr>
+              }
+              {props.card.bio &&               
+                <tr className="card_list-item">
+                  <td><p>{props.card.bio}</p></td>
+                </tr>
+              }
             </table>
             <div className="card_options">
               <button>
