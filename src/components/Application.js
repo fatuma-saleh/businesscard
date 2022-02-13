@@ -68,12 +68,21 @@ export default function Application(props) {
 
   return (
     <main>
+
       <nav>
         <NavTop onClick={setPage} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       </nav>
+
       <section className="main">
-        {page === "MainPage" && <MainPage />}
-        {page === "QR" && <QR card={myCards[0]} />}
+
+        {page === "MainPage" &&(
+          <MainPage />
+        )}
+
+        {page === "QR" && (
+          <QR card={myCards[0]} />
+        )}
+
         {page === "MyCards" && myCards[0] && (
           <MyCards
             myCards={myCards}
@@ -81,19 +90,28 @@ export default function Application(props) {
             setMyCards={setMyCards}
           />
         )}
+
         {page === "SavedCards" && savedCards[0] && (
           <SavedCards savedCards={savedCards} />
         )}
-        {page === "Login" && <Login setCurrentUser={setCurrentUser} setPage={setPage}/>}
-        {page === "Register" && <Register setPage={setPage} setCurrentUser={setCurrentUser} />}
+
         {page === "NewCard" && currentUser && (
           <NewCard
             myCards={myCards}
             currentUser={currentUser}
             setMyCards={setMyCards}
+            setPage={setPage}
           />
         )}
-    
+
+        {page === "Login" && (
+          <Login setCurrentUser={setCurrentUser} setPage={setPage}/>
+        )}
+
+        {page === "Register" && (
+          <Register setPage={setPage} setCurrentUser={setCurrentUser} />
+        )}
+
       </section>
     </main>
   );

@@ -1,0 +1,9 @@
+.react-confirm-alert {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  border-style: solid;
+  border-color: black;
+  background-color: burlywood;
+}

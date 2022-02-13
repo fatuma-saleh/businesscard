@@ -3,6 +3,8 @@ import axios from "axios";
 
 import "./NewCard.scss"
 
+import { confirmAlert } from 'react-confirm-alert';
+
 import CardForm from "./CardForm";
 
 export default function NewCard(props) {
@@ -19,22 +21,38 @@ export default function NewCard(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const headers = {
-      headers: { Authorization: `Bearer ${props.currentUser.token}`}
-    };
-    return axios.post("http://localhost:8001/api/cards", { card } , headers)
-    .then(r => {
-      let newCards = [
-        ...props.myCards,
+    confirmAlert({
+      title: 'Create Card',
+      message: 'Are you sure to do this.',
+      buttons: [
         {
-          ...card,
-          id: r.data.id,
-          isselfcard: true
+          label: 'Confirm',
+          onClick: () => {
+            const headers = {
+              headers: { Authorization: `Bearer ${props.currentUser.token}`}
+            };
+            return axios.post("http://localhost:8001/api/cards", { card } , headers)
+            .then(r => {
+              let newCards = [
+                ...props.myCards,
+                {
+                  ...card,
+                  id: r.data.id,
+                  isselfcard: true
+                }
+              ]
+              props.setMyCards(newCards)
+              props.setPage("MyCards");
+            })
+            .catch(e => console.log(e))
+          }
+        },
+        {
+          label: 'Cancel',
         }
       ]
-      props.setMyCards(newCards)
-    })
-    .catch(e => console.log(e))
+    });
+    
   }
 
   return (
