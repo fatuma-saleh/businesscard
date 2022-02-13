@@ -1,38 +1,13 @@
-import axios from "axios";
-
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { confirmAlert } from 'react-confirm-alert';
 
 export default function Card(props) {
 
   const handleDelete = e => {
     e.preventDefault();
-    confirmAlert({
-      title: 'Delete Card',
-      message: 'Are you sure to do this.',
-      buttons: [
-        {
-          label: 'Confirm',
-          onClick: () => {
-            const headers = {
-              headers: { Authorization: `Bearer ${props.currentUser.token}`}
-            };
-            return axios.delete(`http://localhost:8001/api/cards/${props.card.id}`, headers)
-            .then(r => {
-              console.log(r.data)
-              props.deleteCard(props.card.id)
-            })
-            .catch(e => console.log(e))
-          }
-        },
-        {
-          label: 'Cancel',
-        }
-      ]
-    });
+    props.deleteCard(props.card.id)
   }
 
   const handleEdit = e => {
