@@ -8,6 +8,11 @@ export default function MyCards(props) {
     });
     props.setMyCards(newCards)
   }
+
+  const editCard = (id) => {
+    props.setEditCardId(id)
+    props.setPage("EditCard")
+  }
     
 
   const myCards = props.myCards.map(card => {
@@ -17,6 +22,7 @@ export default function MyCards(props) {
         card={card}
         currentUser={props.currentUser}
         deleteCard={deleteCard}
+        editCard={editCard}
       />
     )
   })

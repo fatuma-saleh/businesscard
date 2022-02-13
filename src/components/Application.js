@@ -9,6 +9,7 @@ import Login from "./Login";
 import Register from "./Register";
 import QR from "./QR";
 import NewCard from "./NewCard";
+import EditCard from "./EditCard";
 
 
 export default function Application(props) {
@@ -17,6 +18,7 @@ export default function Application(props) {
 
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
+  const [editCardId, setEditCardId] = useState();
   
 
   // const getHeader = function () {
@@ -88,6 +90,8 @@ export default function Application(props) {
             myCards={myCards}
             currentUser={currentUser}
             setMyCards={setMyCards}
+            setPage={setPage}
+            setEditCardId={setEditCardId}
           />
         )}
 
@@ -101,6 +105,16 @@ export default function Application(props) {
             currentUser={currentUser}
             setMyCards={setMyCards}
             setPage={setPage}
+          />
+        )}
+
+        {page === "EditCard" && currentUser && (
+          <EditCard
+            myCards={myCards}
+            currentUser={currentUser}
+            setMyCards={setMyCards}
+            setPage={setPage}
+            editCardId={editCardId}
           />
         )}
 

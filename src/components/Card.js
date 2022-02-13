@@ -35,6 +35,11 @@ export default function Card(props) {
     });
   }
 
+  const handleEdit = e => {
+    e.preventDefault();
+    props.editCard(props.card.id)
+  }
+
   return (
     <article>
       <div className="card">
@@ -115,7 +120,7 @@ export default function Card(props) {
       <footer>
         {props.card.isselfcard &&
           <div>
-            <button>edit card</button>
+            <button onClick={handleEdit}>edit card</button>
           </div>
         }
           <div>
