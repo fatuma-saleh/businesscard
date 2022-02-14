@@ -25,10 +25,12 @@ ul {
   padding: 10px;
   transition: 0.3s ease-in-out;
   font-size: 1em;
+  color: #c97b7b;
+  font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
 .button-container button:hover {
-  background-color: rgb(228, 228, 228);
+  background-color: #e6b1b4;
 }
 
 .main {
