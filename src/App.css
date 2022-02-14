@@ -2,6 +2,7 @@ body {
   font-family: Georgia, Times, 'Times New Roman', serif;
   color: #a84e4e;
   background-color: #d9c9cc;
+  text-align: center;
 }
 
 nav b {
@@ -43,7 +44,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 
 .main-logo {
