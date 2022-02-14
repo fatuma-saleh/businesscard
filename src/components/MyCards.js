@@ -53,6 +53,7 @@ export default function MyCards(props) {
   return (
     <>
     <h2 className="mycards-heading">My Cards</h2>
+    <p>Here is where you can store all of your own contact information.</p>
     <ul>
       {myCards}
     </ul></>

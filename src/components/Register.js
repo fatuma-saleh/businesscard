@@ -29,7 +29,7 @@ export default function Register(props) {
             name="firstName"
             type="text"
             value={firstName}
-            placeholder="Enter First Name"
+            // placeholder="Enter First Name"
             onChange={(event) => setfirstName(event.target.value)}
           />
         </div>
@@ -39,7 +39,7 @@ export default function Register(props) {
             name="lastName"
             type="text"
             value={lastName}
-            placeholder="Enter Last Name"
+            // placeholder="Enter Last Name"
             onChange={(event) => setlastName(event.target.value)}
           />
         </div>
@@ -49,7 +49,7 @@ export default function Register(props) {
             name="email"
             type="email"
             value={email}
-            placeholder="Enter your email"
+            // placeholder="Enter your email"
             onChange={(event) => setemail(event.target.value)}
           />
         </div>
@@ -60,7 +60,7 @@ export default function Register(props) {
             name="password"
             type="password"
             value={password}
-            placeholder="Enter password"
+            // placeholder="Enter password"
             onChange={(event) => setpassword(event.target.value)}
           />
         </div>
