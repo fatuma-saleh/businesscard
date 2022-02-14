@@ -1,5 +1,5 @@
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Georgia, Times, 'Times New Roman', serif;
   color: #c97b7b;
   background-color: #d9c9cc;
 }
@@ -58,10 +58,18 @@ ul {
 .login button, .register button {
   font-size: 1em;
   margin: 20px 30%;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  color: #492d2d;
+  background-color: #ffd6d8;
+}
+
+.login button:hover, .register button:hover {
+  background-color: #e6b1b4;
 }
 
 .login input, .register input {
   font-size: 0.8em;
+  font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
 article {
