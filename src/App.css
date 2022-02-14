@@ -49,13 +49,19 @@ ul {
 }
 
 .login, .register {
+  font-size: 1.5em;
   padding: 40px 30%;
   line-height: 2;
+  color: #492d2d;
 }
 
 .login button, .register button {
   font-size: 1em;
   margin: 20px 30%;
+}
+
+.login input, .register input {
+  font-size: 0.8em;
 }
 
 article {
