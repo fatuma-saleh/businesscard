@@ -19,6 +19,7 @@ export default function NavTop({currentUser,onClick,setCurrentUser}) {
           {/* < align=right>John's Home Page</P> */}
            <p><b>Welcome {currentUser.first_name}!</b></p>
           <div className={"button-container"}>
+          <button onClick={() => onClick("MainPage")}>Main Page</button>
           <button onClick={() => onClick("MyCards")}>My Cards</button>
           <button onClick={() => onClick("SavedCards")}>
             Saved Cards
