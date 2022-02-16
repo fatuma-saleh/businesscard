@@ -113,15 +113,18 @@ export default function CardForm(props) {
             </label>
           </td>
         </tr>
-        <label>
-          Instgram:
-          <input
-            name="instagram"
-            type="text"
-            onChange={props.handleChange}
-          />
-        </label>
-        <br />
+        <tr>
+          <td>Instagram</td>
+          <td>
+            <label>
+              <input
+                name="instagram"
+                type="text"
+                onChange={props.handleChange}
+              />
+            </label>
+          </td>
+        </tr>
         <label>
           bio:
           <input
