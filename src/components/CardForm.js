@@ -65,15 +65,18 @@ export default function CardForm(props) {
             </label>
           </td>
         </tr>
-        <label>
-          Phone:
-          <input
-            name="phone"
-            type="tel"
-            onChange={props.handleChange}
-          />
-        </label>
-        <br />
+        <tr>
+          <td>Phone</td>
+          <td>
+            <label>
+              <input
+                name="phone"
+                type="tel"
+                onChange={props.handleChange}
+              />
+            </label>
+        </td>
+        </tr>
         <label>
           Github:
           <input
