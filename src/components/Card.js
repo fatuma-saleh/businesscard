@@ -1,6 +1,6 @@
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faAt, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 export default function Card(props) {
