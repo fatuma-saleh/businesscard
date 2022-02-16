@@ -55,7 +55,7 @@ export default function Card(props) {
                 }
                 {props.card.github &&
                 <tr className="card_list-item">
-                  <td><FontAwesomeIcon icon={faGithub} /></td>
+                  <td><FontAwesomeIcon icon={faGithub} className="icon-github" /></td>
                   <td><a href={props.card.github}>{props.card.github}</a></td>
                 </tr>
                 }
