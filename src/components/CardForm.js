@@ -1,6 +1,6 @@
 export default function CardForm(props) {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form onSubmit={props.handleSubmit} className="card-form">
       {props.onCancel && <p>Editing Card</p>}
       {!props.onCancel && <p>Creating New Card</p>}
       <label>
