@@ -18,7 +18,7 @@ export default function Application(props) {
 
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
-  const [editCardId, setEditCardId] = useState();
+  const [editCard, setEditCard] = useState({});
   
 
   // const getHeader = function () {
@@ -91,7 +91,7 @@ export default function Application(props) {
             currentUser={currentUser}
             setMyCards={setMyCards}
             setPage={setPage}
-            setEditCardId={setEditCardId}
+            setEditCard={setEditCard}
           />
         )}
 
@@ -114,7 +114,7 @@ export default function Application(props) {
             currentUser={currentUser}
             setMyCards={setMyCards}
             setPage={setPage}
-            editCardId={editCardId}
+            editCard={editCard}
           />
         )}
 

@@ -12,7 +12,7 @@ export default function Card(props) {
 
   const handleEdit = e => {
     e.preventDefault();
-    props.editCard(props.card.id)
+    props.editCard(props.card)
   }
 
   return (
@@ -85,6 +85,11 @@ export default function Card(props) {
               </tbody>
             </table>
             <div className="card_options">
+                {props.card.isselfcard && 
+                  <button>
+                    <a href={`showcard/${props.card.id}`}>Display QR Code</a>
+                  </button>
+                }
               {props.card.isselfcard && 
                 <div>
                 <button className="display-button"><a href="display">Display QR Code</a></button>
