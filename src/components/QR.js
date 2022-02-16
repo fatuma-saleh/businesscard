@@ -1,6 +1,13 @@
 import "./QR.scss"
+import { useParams } from "react-router-dom";
+const QRCode = require('qrcode.react');
 export default function QR(props) {
+  let { id } = useParams();
+  console.log("hhhh",id)
   return (
+    // <div>QR page
+    //   <QRCode value={`showcard/${id}`} size={328} />
+    // </div>
     <article>
       <div className="card">
         <div className="card_photo">
@@ -46,4 +53,5 @@ export default function QR(props) {
         </footer>
     </article>
   )
+
 }
