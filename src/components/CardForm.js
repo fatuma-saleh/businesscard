@@ -3,7 +3,7 @@ export default function CardForm(props) {
     <form onSubmit={props.handleSubmit} className="card-form">
       {props.onCancel && <p>Editing Card</p>}
       {!props.onCancel && <p>Creating New Card</p>}
-      <table>
+      <table className="card-form-table">
         <tr>
           <td>Name</td>
           <td>
