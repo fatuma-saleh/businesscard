@@ -101,7 +101,7 @@ article {
   padding-bottom: 1.67em;
 }
 
-.card_options button {
+.display-button {
   padding: 5px;
   font-size: 1em;
   background-color: #ffd6d8;
@@ -109,16 +109,16 @@ article {
   border-color: #b13554;
 }
 
-.card_options button:hover {
+.display-button:hover {
   background-color: #e6b1b4;
 }
 
-.card_options a {
+.display-button a {
   color: #831a34;
   text-decoration: none;
 }
 
-.card_options a:hover {
+.display-button a:hover {
   text-decoration: underline;
 }
 
