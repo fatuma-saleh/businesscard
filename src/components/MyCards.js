@@ -38,7 +38,6 @@ export default function MyCards(props) {
     props.setEditCard(card)
     props.setPage("EditCard")
   }
-    
 
   const myCards = props.myCards.map(card => {
     return (
