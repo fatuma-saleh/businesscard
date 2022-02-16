@@ -90,12 +90,8 @@ export default function Card(props) {
                 <button className="display-button"><a href="display">Display QR Code</a></button>
                 </div>
               }
-              {props.card.isselfcard &&
-                <div>
-                  <button onClick={handleEdit}>edit card</button>
-                </div>
-              }
-              <div>
+              <div className="edit-delete">
+              {props.card.isselfcard && <button onClick={handleEdit}>edit card</button>}
                 <button onClick={handleDelete}>delete card</button>
               </div>
             </div>
