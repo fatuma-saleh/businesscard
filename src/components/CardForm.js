@@ -139,7 +139,7 @@ export default function CardForm(props) {
         </td>
         </tr>
       </table>
-        <input type="submit" value="Submit" />
+        <input className="card-form-submit" type="submit" value="Submit" />
       <br />
         {props.onCancel &&
           <button onClick={props.onCancel}>Cancel</button>
