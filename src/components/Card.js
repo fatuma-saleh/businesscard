@@ -86,18 +86,21 @@ export default function Card(props) {
             </table>
             <div className="card_options">
                 {props.card.isselfcard && 
-                  <button>
+                  <button className="display-button">
                     <a href={`showcard/${props.card.id}`}>Display QR Code</a>
                   </button>
                 }
-              {props.card.isselfcard && 
-                <div>
-                <button className="display-button"><a href="display">Display QR Code</a></button>
-                </div>
-              }
-              <div className="card_edit-delete">
-              {props.card.isselfcard && <button className="edit-button" onClick={handleEdit}><FontAwesomeIcon icon={faPenToSquare} className="icon-edit" /></button>}
-                <button className="delete-button" onClick={handleDelete}><FontAwesomeIcon icon={faTrashCan} className="icon-delete" /></button>
+                <div className="card_edit-delete">
+                  {props.editCard &&
+                    <button className="edit-button" onClick={handleEdit}>
+                      <FontAwesomeIcon icon={faPenToSquare} className="icon-edit" />
+                    </button>
+                  }
+                  {props.deleteCard &&
+                    <button className="delete-button" onClick={handleDelete}>
+                      <FontAwesomeIcon icon={faTrashCan} className="icon-delete" />
+                    </button>
+                  }
               </div>
             </div>
           </div>
