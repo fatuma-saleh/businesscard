@@ -29,15 +29,18 @@ export default function CardForm(props) {
             </label>
           </td>
         </tr>
-        <label>
-          Photo:
-          <input
-            name="photo"
-            type="text"
-            onChange={props.handleChange}
-          />
-        </label>
-        <br />
+        <tr>
+          <td>Photo</td>
+          <td>
+            <label>
+              <input
+                name="photo"
+                type="text"
+                onChange={props.handleChange}
+              />
+            </label>
+          </td>
+        </tr>
         <label>
           title:
           <input
