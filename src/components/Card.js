@@ -85,9 +85,19 @@ export default function Card(props) {
               </tbody>
             </table>
             <div className="card_options">
-            {props.card.isselfcard && <button className="display-button"><a href="display">Display QR Code</a></button>}
-            {props.card.isselfcard && <button onClick={handleEdit}>edit card</button>}
-            <button onClick={handleDelete}>delete card</button>
+              {props.card.isselfcard && 
+                <div>
+                <button className="display-button"><a href="display">Display QR Code</a></button>
+                </div>
+              }
+              {props.card.isselfcard &&
+                <div>
+                  <button onClick={handleEdit}>edit card</button>
+                </div>
+              }
+              <div>
+                <button onClick={handleDelete}>delete card</button>
+              </div>
             </div>
           </div>
         </div>
