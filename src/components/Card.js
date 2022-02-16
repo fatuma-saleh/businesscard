@@ -20,12 +20,12 @@ export default function Card(props) {
     props.editCard(props.card)
   }
 
-  const generateQrCode = () => {
-    React.render(
-      <QRCode value={`showcard/${props.card.id}`} size={128} />
+  // const generateQrCode = () => {
+  //   React.render(
+  //     <QRCode value={`showcard/${props.card.id}`} size={128} />
       
-    );
-  }
+  //   );
+  // }
   return (
     <article>
       <div className="card">
