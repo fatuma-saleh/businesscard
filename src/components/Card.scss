@@ -13,11 +13,22 @@
 }
 
 .card_photo {
-  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 15px;
 }
 
 .card_photo img {
   width: 100px;
   height: 150px;
+}
+
+.card_body {
+  margin-left: 40px;
+}
+
+.card_options {
+  padding-top: 1.67em;
+  padding-bottom: 1.67em;
 }

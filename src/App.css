@@ -86,21 +86,6 @@ article {
   text-align: center;
 }
 
-.card_body {
-  margin-left: 40px;
-}
-
-.card_photo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card_options {
-  padding-top: 1.67em;
-  padding-bottom: 1.67em;
-}
-
 .display-button {
   padding: 5px;
   font-size: 1em;
