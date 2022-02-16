@@ -1,6 +1,6 @@
 import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faAt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faAt, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 export default function Card(props) {
@@ -90,22 +90,19 @@ export default function Card(props) {
                     <a href={`showcard/${props.card.id}`}>Display QR Code</a>
                   </button>
                 }
+              {props.card.isselfcard && 
+                <div>
+                <button className="display-button"><a href="display">Display QR Code</a></button>
+                </div>
+              }
+              <div className="card_edit-delete">
+              {props.card.isselfcard && <button className="edit-button" onClick={handleEdit}><FontAwesomeIcon icon={faPenToSquare} className="icon-edit" /></button>}
+                <button className="delete-button" onClick={handleDelete}><FontAwesomeIcon icon={faTrashCan} className="icon-delete" /></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer>
-        {props.editCard &&
-          <div>
-            <button onClick={handleEdit}>edit card</button>
-          </div>
-        }
-        {props.deleteCard && 
-          <div>
-            <button onClick={handleDelete}>delete card</button>
-          </div>
-        }
-      </footer>
     </article>
   )
 } 

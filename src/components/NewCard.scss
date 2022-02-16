@@ -1,0 +1,23 @@
+.card-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(99, 14, 77);
+  font-size: 1.1em;
+}
+
+.card-form-submit {
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 1em;
+  background-color: #ffd6d8;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  border-color: #b13554;
+  color: #831a34;
+}
+
+.card-form-submit:hover {
+  background-color: #e6b1b4;
+  text-decoration: underline;
+}
