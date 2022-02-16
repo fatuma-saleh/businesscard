@@ -91,8 +91,8 @@ export default function Card(props) {
                 </div>
               }
               <div className="card_edit-delete">
-              {props.card.isselfcard && <button className="edit-button" onClick={handleEdit}>edit card</button>}
-                <button className="delete-button" onClick={handleDelete}>delete card</button>
+              {props.card.isselfcard && <button className="edit-button" onClick={handleEdit}><FontAwesomeIcon icon={faPenToSquare} className="edit-icon" /></button>}
+                <button className="delete-button" onClick={handleDelete}><FontAwesomeIcon icon={faTrashCan} className="delete-icon" /></button>
               </div>
             </div>
           </div>
