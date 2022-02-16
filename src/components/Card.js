@@ -85,9 +85,7 @@ export default function Card(props) {
               </tbody>
             </table>
             <div className="card_options">
-              <button>
-              {props.card.isselfcard && <a href="display">Display QR Code</a>}
-              </button>
+            {props.card.isselfcard && <button><a href="display">Display QR Code</a></button>}
             </div>
           </div>
         </div>
