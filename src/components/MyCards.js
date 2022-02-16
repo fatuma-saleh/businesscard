@@ -34,8 +34,8 @@ export default function MyCards(props) {
     });
   }
 
-  const editCard = (id) => {
-    props.setEditCardId(id)
+  const editCard = (card) => {
+    props.setEditCard(card)
     props.setPage("EditCard")
   }
     

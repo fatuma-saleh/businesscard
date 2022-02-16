@@ -9,6 +9,7 @@ export default function CardForm(props) {
           name="fullname"
           type="text"
           required="required"
+          defaultValue={props.card.fullname}
           onChange={props.handleChange}
         />
       </label>
@@ -18,6 +19,7 @@ export default function CardForm(props) {
         <input
           name="email"
           type="email"
+          defaultValue={props.card.email}
           onChange={props.handleChange}
         />
       </label>
@@ -27,6 +29,7 @@ export default function CardForm(props) {
         <input
           name="photo"
           type="text"
+          defaultValue={props.card.photo}
           onChange={props.handleChange}
         />
       </label>
@@ -36,6 +39,7 @@ export default function CardForm(props) {
         <input
           name="title"
           type="text"
+          defaultValue={props.card.title}
           onChange={props.handleChange}
         />
       </label>
@@ -45,6 +49,7 @@ export default function CardForm(props) {
         <input
           name="company"
           type="text"
+          defaultValue={props.card.company}
           onChange={props.handleChange}
         />
       </label>
@@ -54,6 +59,7 @@ export default function CardForm(props) {
         <input
           name="phone"
           type="tel"
+          defaultValue={props.card.phone}
           onChange={props.handleChange}
         />
       </label>
@@ -63,6 +69,7 @@ export default function CardForm(props) {
         <input
           name="github"
           type="text"
+          defaultValue={props.card.github}
           onChange={props.handleChange}
         />
       </label>
@@ -72,6 +79,7 @@ export default function CardForm(props) {
         <input
           name="linkedin"
           type="text"
+          defaultValue={props.card.linkedin}
           onChange={props.handleChange}
         />
       </label>
@@ -81,6 +89,7 @@ export default function CardForm(props) {
         <input
           name="facebook"
           type="text"
+          defaultValue={props.card.facebook}
           onChange={props.handleChange}
         />
       </label>
@@ -90,6 +99,7 @@ export default function CardForm(props) {
         <input
           name="instagram"
           type="text"
+          defaultValue={props.card.instagram}
           onChange={props.handleChange}
         />
       </label>
@@ -99,6 +109,7 @@ export default function CardForm(props) {
         <input
           name="bio"
           type="text"
+          defaultValue={props.card.bio}
           onChange={props.handleChange}
         />
       <br />

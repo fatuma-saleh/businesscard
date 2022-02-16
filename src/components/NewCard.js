@@ -60,6 +60,7 @@ export default function NewCard(props) {
     <CardForm
       handleChange={handleChange}
       handleSubmit={handleSubmit}
+      card={card}
     />
   )
 

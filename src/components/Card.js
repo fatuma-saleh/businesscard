@@ -12,7 +12,7 @@ export default function Card(props) {
 
   const handleEdit = e => {
     e.preventDefault();
-    props.editCard(props.card.id)
+    props.editCard(props.card)
   }
 
   return (
