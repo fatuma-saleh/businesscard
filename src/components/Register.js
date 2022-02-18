@@ -24,16 +24,16 @@ export default function Register(props) {
     <section className="register">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
         <table>
-        <div>
-          <label for="firstName">First Name </label>
-          <input
+        <tr>
+          <td><label for="firstName">First Name </label></td>
+          <td><input
             name="firstName"
             type="text"
             value={firstName}
             // placeholder="Enter First Name"
             onChange={(event) => setfirstName(event.target.value)}
-          />
-        </div>
+          /></td>
+        </tr>
         <div>
           <label for="lastName">Last Name </label>
           <input
