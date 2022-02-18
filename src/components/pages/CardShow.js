@@ -11,7 +11,7 @@ export default function CardShow (props) {
   const [cardShow, setCardShow] = useState({})
     
   useEffect(() => {
-    axios.get(`http://localhost:8001/api/cards/${id}`)
+    axios.get(`/api/cards/${id}`)
       .then(r => setCardShow(r.data[0]))
       .catch(e => console.log(e))
   }, [id])
