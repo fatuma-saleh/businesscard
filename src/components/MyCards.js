@@ -16,7 +16,7 @@ export default function MyCards(props) {
             const headers = {
               headers: { Authorization: `Bearer ${props.currentUser.token}`}
             };
-            return axios.delete(`http://localhost:8001/api/cards/${id}`, headers)
+            return axios.delete(`/api/cards/${id}`, headers)
             .then(r => {
               console.log(r.data)
               let newCards = props.myCards.filter(card => {
