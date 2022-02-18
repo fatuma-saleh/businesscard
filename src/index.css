@@ -7,3 +7,16 @@
   border-color: black;
   background-color: burlywood;
 }
+
+.react-confirm-alert h1 {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.react-confirm-alert-body {
+  padding: 20px;
+}
+
+.react-confirm-alert-button-group {
+  padding-top: 10px;
+}
