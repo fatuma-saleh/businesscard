@@ -48,16 +48,18 @@ export default function Register(props) {
             />
           </td>
         </tr>
-        <div>
-          <label for="email">Email </label>
-          <input
-            name="email"
-            type="email"
-            value={email}
-            // placeholder="Enter your email"
-            onChange={(event) => setemail(event.target.value)}
-          />
-        </div>
+        <tr>
+          <td><label for="email">Email </label></td>
+          <td>
+            <input
+              name="email"
+              type="email"
+              value={email}
+              // placeholder="Enter your email"
+              onChange={(event) => setemail(event.target.value)}
+            />
+          </td>
+        </tr>
 
         <div>
           <label for="firstName">Password </label>
