@@ -7,7 +7,7 @@
   font-size: 1.1em;
 }
 
-.card-form-submit {
+.card-form-submit, .card-form-cancel {
   margin-top: 20px;
   padding: 5px;
   font-size: 1em;
@@ -17,7 +17,16 @@
   color: #831a34;
 }
 
-.card-form-submit:hover {
+.card-form-submit:hover, .card-form-cancel:hover {
   background-color: #e6b1b4;
   text-decoration: underline;
+}
+
+.card-form-cancel {
+  background-color: red;
+  color: white;
+}
+
+.card-form-cancel:hover {
+  background-color: rgb(255, 107, 107);
 }

@@ -21,27 +21,32 @@ export default function Login(props) {
   return (
     <section className="login">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
-        <div>
-          <label for="email">Email </label>
-          <input
-            name="email"
-            type="email"
-            value={email}
-            // placeholder="Enter your email"
-            onChange={(event) => setemail(event.target.value)}
-          />
-        </div>
-
-        <div> 
-          <label for="firstName">Password </label>
-          <input
-            name="password"
-            type="password"
-            value={password}
-            // placeholder="Enter password"
-            onChange={(event) => setpassword(event.target.value)}
-          />
-        </div>
+        <table>
+          <tr>
+            <td><label for="email">Email </label></td>
+            <td>
+              <input
+                name="email"
+                type="email"
+                value={email}
+                // placeholder="Enter your email"
+                onChange={(event) => setemail(event.target.value)}
+              />
+            </td>
+          </tr>
+          <tr> 
+            <td><label for="firstName">Password </label></td>
+            <td>
+              <input
+                name="password"
+                type="password"
+                value={password}
+                // placeholder="Enter password"
+                onChange={(event) => setpassword(event.target.value)}
+              />
+            </td>
+          </tr>
+        </table>
       </form>
       <button onClick={onLogin}>Login</button>
     </section>

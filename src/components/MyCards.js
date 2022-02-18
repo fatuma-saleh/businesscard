@@ -8,7 +8,7 @@ export default function MyCards(props) {
   const deleteCard = (id) => {
     confirmAlert({
       title: 'Delete Card',
-      message: 'Are you sure to do this.',
+      message: 'Are you sure you want to delete your card?',
       buttons: [
         {
           label: 'Confirm',
