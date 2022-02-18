@@ -21,6 +21,7 @@ export default function Login(props) {
   return (
     <section className="login">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
+        <table>
         <div>
           <label for="email">Email </label>
           <input
@@ -42,6 +43,7 @@ export default function Login(props) {
             onChange={(event) => setpassword(event.target.value)}
           />
         </div>
+        </table>
       </form>
       <button onClick={onLogin}>Login</button>
     </section>
