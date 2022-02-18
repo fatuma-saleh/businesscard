@@ -46,10 +46,11 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .main-logo {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .login, .register {
