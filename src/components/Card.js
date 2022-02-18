@@ -100,14 +100,14 @@ export default function Card(props) {
               
                 {props.card.isselfcard && 
                 <>
-                  <button className="display-button" onClick={() => setqrIsVisible(true)} >
+                  {/* <button className="display-button" onClick={() => setqrIsVisible(true)} > */}
+                  <button className="display-button"  >
                     {/* <a href={`showcard/${props.card.id}`}>Display QR Code</a> */}
                     {/* { <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
-                    {/* <Link to={`/showcard/${props.card.id}`} >Display QR Code</Link> */}
-                    Display QR CODE 
-                   
-                  </button>
-                 {qrIsVisible && <QRCode value={`showcard/${props.card.id}`} size={128} />}
+                    <Link to={`/showQR/${props.card.id}`} >Display QR Code</Link>
+
+                   </button>
+                 {/* {qrIsVisible && <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
                   </>
                 }
                 
