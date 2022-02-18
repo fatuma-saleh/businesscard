@@ -26,24 +26,28 @@ export default function Register(props) {
         <table>
         <tr>
           <td><label for="firstName">First Name </label></td>
-          <td><input
-            name="firstName"
-            type="text"
-            value={firstName}
-            // placeholder="Enter First Name"
-            onChange={(event) => setfirstName(event.target.value)}
-          /></td>
+          <td>
+            <input
+              name="firstName"
+              type="text"
+              value={firstName}
+              // placeholder="Enter First Name"
+              onChange={(event) => setfirstName(event.target.value)}
+            />
+          </td>
         </tr>
-        <div>
-          <label for="lastName">Last Name </label>
-          <input
-            name="lastName"
-            type="text"
-            value={lastName}
-            // placeholder="Enter Last Name"
-            onChange={(event) => setlastName(event.target.value)}
-          />
-        </div>
+        <tr>
+          <td><label for="lastName">Last Name </label></td>
+          <td>
+            <input
+              name="lastName"
+              type="text"
+              value={lastName}
+              // placeholder="Enter Last Name"
+              onChange={(event) => setlastName(event.target.value)}
+            />
+          </td>
+        </tr>
         <div>
           <label for="email">Email </label>
           <input
