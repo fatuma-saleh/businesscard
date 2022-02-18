@@ -1,4 +1,4 @@
-import logo from "../images/icard-logo-v2.jpg";
+import logo from "../images/icard-logo-v3.jpg";
 
 export default function MainPage(props) {
   return (
