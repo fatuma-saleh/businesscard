@@ -23,6 +23,7 @@ export default function Register(props) {
   return (
     <section className="register">
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
+        <table>
         <div>
           <label for="firstName">First Name </label>
           <input
@@ -64,6 +65,7 @@ export default function Register(props) {
             onChange={(event) => setpassword(event.target.value)}
           />
         </div>
+        </table>
       </form>
       <button onClick={onRegister}>Register</button>
     </section>
