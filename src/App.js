@@ -21,12 +21,18 @@ function App() {
               element={<Application />} />
             <Route
               path={`showcard/:id`}
-              // element={<CardShow />}
+               element={<CardShow />}
+
               // element={<QRCode value={`showcard/${props.card.id}`} size={128} />}
               // element={<QRCode value={`showcard/104`} size={328} />}
-              element={<QR />}
+              // element={<QR />}
             />
+            <Route path={`showQR/:id`} 
+              element={<QR />}>
+            </Route>
+
           </Route>
+
         </Routes>
       </BrowserRouter>
     </div>
