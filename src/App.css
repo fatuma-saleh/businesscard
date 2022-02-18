@@ -57,6 +57,9 @@ ul {
   padding: 40px 30%;
   line-height: 2;
   color: #492d2d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login button, .register button {
