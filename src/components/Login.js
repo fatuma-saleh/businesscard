@@ -34,16 +34,18 @@ export default function Login(props) {
               />
             </td>
           </tr>
-          <div> 
-            <label for="firstName">Password </label>
-            <input
-              name="password"
-              type="password"
-              value={password}
-              // placeholder="Enter password"
-              onChange={(event) => setpassword(event.target.value)}
-            />
-          </div>
+          <tr> 
+            <td><label for="firstName">Password </label></td>
+            <td>
+              <input
+                name="password"
+                type="password"
+                value={password}
+                // placeholder="Enter password"
+                onChange={(event) => setpassword(event.target.value)}
+              />
+            </td>
+          </tr>
         </table>
       </form>
       <button onClick={onLogin}>Login</button>
