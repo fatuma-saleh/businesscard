@@ -20,7 +20,7 @@ const handleChange = e => {
 const handleSubmit = e => {
   e.preventDefault();
   confirmAlert({
-    title: 'Confirm Editing Card',
+    title: 'Edite Card',
     message: 'Are you sure to Edit this Card.',
     buttons: [
       {
