@@ -81,9 +81,9 @@ export default function Application(props) {
           <MainPage />
         )}
 
-        {page === "QR" && myCards[0] && (
+        {/* {page === "QR" && myCards[0] && (
           <QR card={myCards[0]} />
-        )}
+        )} */}
 
         {page === "MyCards" && myCards[0] && (
           <MyCards

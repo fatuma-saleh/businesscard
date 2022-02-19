@@ -2,9 +2,14 @@ import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import  React, {useState} from "react";
+import { Link } from "react-router-dom";
+
+const QRCode = require('qrcode.react');
+
 
 export default function Card(props) {
-
+  const [qrIsVisible,setqrIsVisible] = useState(false)
   const handleDelete = e => {
     e.preventDefault();
     props.deleteCard(props.card.id)
@@ -15,6 +20,12 @@ export default function Card(props) {
     props.editCard(props.card)
   }
 
+  // const generateQrCode = () => {
+  //   React.render(
+  //     <QRCode value={`showcard/${props.card.id}`} size={128} />
+      
+  //   );
+  // }
   return (
     <article>
       <div className="card">
@@ -84,12 +95,22 @@ export default function Card(props) {
                 }
               </tbody>
             </table>
+            
             <div className="card_options">
+              
                 {props.card.isselfcard && 
-                  <button className="display-button">
-                    <a href={`showcard/${props.card.id}`}>Display QR Code</a>
-                  </button>
+                <>
+                  {/* <button className="display-button" onClick={() => setqrIsVisible(true)} > */}
+                  <button className="display-button"  >
+                    {/* <a href={`showcard/${props.card.id}`}>Display QR Code</a> */}
+                    {/* { <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
+                    <Link to={`/showQR/${props.card.id}`} >Display QR Code</Link>
+
+                   </button>
+                 {/* {qrIsVisible && <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
+                  </>
                 }
+                
                 <div className="card_edit-delete">
                   {props.editCard &&
                     <button className="edit-button" onClick={handleEdit}>
