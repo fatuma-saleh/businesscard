@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import CardShowCard from './CardShowCard';
 import CardShowRegister from './CardShowRegister';
+import CardShowLogin from './CardShowLogin';
 
 export default function CardShow (props) {
 
@@ -36,6 +37,15 @@ export default function CardShow (props) {
           setCurrentUser={setCurrentUser}
         />
       )}
+      {page === "CardShowLogin" && (
+        <CardShowLogin
+          cardShow={cardShow}
+          setPage={setPage}
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+      )}
+      
     </div>
   )
 }
