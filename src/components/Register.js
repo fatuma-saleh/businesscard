@@ -16,8 +16,8 @@ export default function Register(props) {
        props.setCurrentUser(data.user)
        props.setPage("MyCards")
      } catch (error) {
-       console.log(error)
-     }  
+       error.response.data.detail? alert(error.response.data.detail) : alert(error.response.data)
+     }
     };
   
   return (
