@@ -5,7 +5,8 @@ export default function Login(props) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  const onLogin = async function () {
+  const onLogin = async function (e) {
+    e.preventDefault();
     // console.log("@@@@@", password)
    try {
      const { data } = await axios.post("http://localhost:8001/api/login", { email, password })
@@ -18,10 +19,15 @@ export default function Login(props) {
   }  
   };
 
+  const onRegister = e => {
+    e.preventDefault();
+    props.setPage("CardShowRegister")
+  }
+
   return (
     <section className="login">
       <h3>Login Page</h3>
-      <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
+      <form autoComplete="off" onSubmit={onLogin}>
         <table>
           <tr>
             <td><label for="email">Email </label></td>
@@ -48,8 +54,10 @@ export default function Login(props) {
             </td>
           </tr>
         </table>
+        <button type="submit">Login</button>
       </form>
-      <button onClick={onLogin}>Login</button>
+      <div className="login-message">Don't have an account yet?</div>
+      <button onClick={onRegister}>Register</button>
     </section>
   );
 }

@@ -7,7 +7,8 @@ export default function CardShowLogin(props) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  const onLogin = async function () {
+  const onLogin = async function (e) {
+    e.preventDefault();
     // console.log("@@@@@", password)
    try {
      const { data } = await axios.post("http://localhost:8001/api/login", { email, password })
@@ -20,6 +21,11 @@ export default function CardShowLogin(props) {
   }  
   };
 
+  const onCancel = e => {
+    e.preventDefault();
+    props.setPage("CardShowCard")
+  }
+
   const onRegister = e => {
     e.preventDefault();
     props.setPage("CardShowRegister")
@@ -28,7 +34,7 @@ export default function CardShowLogin(props) {
   return (
     <section className="login">
       <h3>Login Page</h3>
-      <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
+      <form autoComplete="off" onSubmit={onLogin}>
         <table>
           <tr>
             <td><label for="email">Email </label></td>
@@ -55,8 +61,9 @@ export default function CardShowLogin(props) {
             </td>
           </tr>
         </table>
+        <button type="submit">Login</button>
       </form>
-      <button onClick={onLogin}>Login</button>
+      <button onClick={onCancel}>Cancel</button>
       <div className="login-message">Don't have an account yet?</div>
       <button onClick={onRegister}>Register</button>
     </section>

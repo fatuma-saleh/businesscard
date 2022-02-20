@@ -8,7 +8,7 @@ export default function CardShowCard (props) {
   const navigate = useNavigate();
 
   const saveCard = (card) => {
-    !props.currentUser && props.setPage("CardShowRegister")
+    !props.currentUser && props.setPage("CardShowLogin")
     if (props.currentUser) {
       const headers = {
         headers: { Authorization: `Bearer ${props.currentUser.token}`}
