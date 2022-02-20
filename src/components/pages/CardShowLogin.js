@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Login(props) {
+import './CardShowLogin.scss'
+
+export default function CardShowLogin(props) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
@@ -13,11 +15,16 @@ export default function Login(props) {
      console.log("data++++", data)
      localStorage.setItem('user', JSON.stringify(data.user) );
      props.setCurrentUser(data.user)
-     props.setPage("MyCards")
-   } catch (error) {
+     props.setPage("CardShowCard")
+    } catch (error) {
     error.response.data.detail? alert(error.response.data.detail) : alert(error.response.data)
   }  
   };
+
+  const onCancel = e => {
+    e.preventDefault();
+    props.setPage("CardShowCard")
+  }
 
   const onRegister = e => {
     e.preventDefault();
@@ -56,6 +63,7 @@ export default function Login(props) {
         </table>
         <button type="submit">Login</button>
       </form>
+      <button onClick={onCancel}>Cancel</button>
       <div className="login-message">Don't have an account yet?</div>
       <button onClick={onRegister}>Register</button>
     </section>

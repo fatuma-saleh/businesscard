@@ -1,13 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
 
+import './CardShowRegister.scss'
+
 export default function CardShowRegister (props) {
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  const onRegister = async function () {
+  const onRegister = async function (e) {
+    e.preventDefault();
     // console.log("@@@@@", password)
    try {
     const { data } = await axios.post("http://localhost:8001/api/register", { firstName, lastName, email, password })
@@ -25,10 +28,15 @@ export default function CardShowRegister (props) {
     props.setPage("CardShowCard")
   }
 
+  const onLogin = e => {
+    e.preventDefault();
+    props.setPage("CardShowLogin")
+  }
+
   return (
     <section className="register">
-      <h1>Please register to save card</h1>
-      <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
+      <h1>Register to save card</h1>
+      <form autoComplete="off" onSubmit={onRegister}>
         <table>
           <tr>
             <td><label for="firstName">First Name </label></td>
@@ -79,9 +87,11 @@ export default function CardShowRegister (props) {
             </td>
           </tr>
         </table>
+      <button type="submit">Register</button>
       </form>
-      <button onClick={onRegister}>Register</button>
       <button onClick={onCancel}>Cancel</button>
+      <div className="login-message">Already have an account?</div>
+      <button onClick={onLogin}>Login</button>
     </section>
 
   )

@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 
 import CardShowCard from './CardShowCard';
 import CardShowRegister from './CardShowRegister';
+import CardShowLogin from './CardShowLogin';
+import CardShowNav from './CardShowNav';
 
 export default function CardShow (props) {
 
@@ -21,6 +23,14 @@ export default function CardShow (props) {
 
   return (
     <div>
+      <nav>
+        <CardShowNav
+          onClick={setPage}
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+          setPage={setPage}
+        />
+      </nav>
       {page === "CardShowCard" && (
         <CardShowCard
           cardShow={cardShow}
@@ -36,6 +46,15 @@ export default function CardShow (props) {
           setCurrentUser={setCurrentUser}
         />
       )}
+      {page === "CardShowLogin" && (
+        <CardShowLogin
+          cardShow={cardShow}
+          setPage={setPage}
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+      )}
+      
     </div>
   )
 }
