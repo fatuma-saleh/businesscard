@@ -2,7 +2,6 @@ import "./CardForm.scss";
 
 export default function CardForm(props) {
   return (
-    <div>
       <form onSubmit={props.handleSubmit} className="card-form">
         {props.onCancel && <p>Edit Card</p>}
         {!props.onCancel && <p>Create a New Card</p>}
@@ -154,21 +153,20 @@ export default function CardForm(props) {
             </tr>
           </tbody>
         </table>
+        <div className="card-form-button">
+          <table>
+            <tbody>
+              <tr>
+                <input className="card-form-submit" type="submit" value="Submit" />
+              </tr>
+              <tr>
+                {props.onCancel && (
+                  <button className="card-form-cancel" onClick={props.onCancel}>Cancel</button>
+                )}
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </form>
-      <div className="card-form-button">
-        <table>
-          <tbody>
-            <tr>
-              <input className="card-form-submit" type="submit" value="Submit" />
-            </tr>
-            <tr>
-              {props.onCancel && (
-                <button className="card-form-cancel" onClick={props.onCancel}>Cancel</button>
-              )}
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   )
 }
