@@ -7,18 +7,18 @@ import MyCards from "./MyCards";
 import SavedCards from "./SavedCards";
 import Login from "./Login";
 import Register from "./Register";
-import QR from "./QR";
+import DisplayQR from "./DisplayQR";
 import NewCard from "./NewCard";
 import EditCard from "./EditCard";
 
 
 export default function Application(props) {
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
-  const [page, setPage] = useState("MyCards");
+  const [page, setPage] = useState("MainPage");
 
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
-  const [editCard, setEditCard] = useState({});
+  const [currentCard, setCurrentCard] = useState({});
   
 
   // const getHeader = function () {
@@ -91,7 +91,7 @@ export default function Application(props) {
             currentUser={currentUser}
             setMyCards={setMyCards}
             setPage={setPage}
-            setEditCard={setEditCard}
+            setCurrentCard={setCurrentCard}
           />
         )}
 
@@ -114,7 +114,14 @@ export default function Application(props) {
             currentUser={currentUser}
             setMyCards={setMyCards}
             setPage={setPage}
-            editCard={editCard}
+            currentCard={currentCard}
+          />
+        )}
+        
+        {page === "DisplayQR" && currentUser && (
+          <DisplayQR
+            setPage={setPage}
+            currentCard={currentCard}
           />
         )}
 

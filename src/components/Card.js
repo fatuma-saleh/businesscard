@@ -2,14 +2,14 @@ import "./Card.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faAt, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
-import  React, {useState} from "react";
-import { Link } from "react-router-dom";
-
-const QRCode = require('qrcode.react');
-
 
 export default function Card(props) {
-  const [qrIsVisible,setqrIsVisible] = useState(false)
+
+  const handleDisplay = e => {
+    e.preventDefault();
+    props.displayQR(props.card)
+  }
+
   const handleDelete = e => {
     e.preventDefault();
     props.deleteCard(props.card.id)
@@ -17,7 +17,7 @@ export default function Card(props) {
 
   const handleEdit = e => {
     e.preventDefault();
-    props.editCard(props.card)
+    props.currentCard(props.card)
   }
 
   // const generateQrCode = () => {
@@ -101,11 +101,11 @@ export default function Card(props) {
                 {props.card.isselfcard && 
                 <>
                   {/* <button className="display-button" onClick={() => setqrIsVisible(true)} > */}
-                  <button className="display-button"  >
+                  <button className="display-button" onClick={handleDisplay} >
                     {/* <a href={`showcard/${props.card.id}`}>Display QR Code</a> */}
                     {/* { <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
-                    <Link to={`/showQR/${props.card.id}`} >Display QR Code</Link>
-
+                    {/* <Link to={`/showQR/${props.card.id}`} >Display QR Code</Link> */}
+                    Display QR Code
                    </button>
                  {/* {qrIsVisible && <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
                   </>

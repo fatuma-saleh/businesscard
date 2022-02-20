@@ -5,6 +5,11 @@ import Card from "./Card";
 
 export default function MyCards(props) {
 
+  const displayQR = (card) => {
+    props.setCurrentCard(card)
+    props.setPage("DisplayQR")
+  }
+
   const deleteCard = (id) => {
     confirmAlert({
       title: 'Delete Card',
@@ -35,7 +40,7 @@ export default function MyCards(props) {
   }
 
   const editCard = (card) => {
-    props.setEditCard(card)
+    props.setCurrentCard(card)
     props.setPage("EditCard")
   }
 
@@ -46,6 +51,7 @@ export default function MyCards(props) {
         card={card}
         deleteCard={deleteCard}
         editCard={editCard}
+        displayQR={displayQR}
       />
     )
   })

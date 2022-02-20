@@ -1,18 +1,34 @@
-import "./QR.scss";
-import { useParams } from "react-router-dom";
-import MyCards from "./MyCards";
-import { Link } from "react-router-dom";
+import "./DisplayQR.scss";
+
 const QRCode = require("qrcode.react");
-export default function QR(props) {
-  let { id } = useParams();
+
+export default function DisplayQR(props) {
+
+  const url = `http://localhost:3000/showcard/${props.currentCard.id}`
+
+  const handleBack = e => {
+    e.preventDefault();
+    props.setPage("MyCards")
+  }
 
   return (
     <>
       <div>
-        <QRCode value={`http://localhost:3000/showcard/${id}`} size={328} />
-      </div>
-      <Link to={`/`}>Back</Link>
-      
+        <ul>
+          <li>
+           <p>Scan QR code using Camera</p>
+          </li>
+          <li>
+            <QRCode value={url} size={328} />
+          </li>
+          <li>
+            <button
+              onClick={handleBack}
+              className="QR-cancel"
+            >Back</button>
+          </li>
+        </ul>
+      </div>      
     </>
     // <article>
     //   <div className="card">

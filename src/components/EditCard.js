@@ -7,7 +7,7 @@ import CardForm from "./CardForm";
 
 export default function EditCard (props) {
 
-const [card, setCard] = useState(props.editCard)
+const [card, setCard] = useState(props.currentCard)
   
 const handleChange = e => {
   const { name, value } = e.target;
@@ -29,12 +29,12 @@ const handleSubmit = e => {
           const headers = {
             headers: { Authorization: `Bearer ${props.currentUser.token}`}
           };
-          return axios.put(`http://localhost:8001/api/cards/${props.editCard.id}`, { card } , headers)
+          return axios.put(`http://localhost:8001/api/cards/${props.currentCard.id}`, { card } , headers)
           .then(r => {
-            let newCards = props.myCards.map(c => c.id === props.editCard.id
+            let newCards = props.myCards.map(c => c.id === props.currentCard.id
               ? {
                 ...card,
-                id: props.editCard.id,
+                id: props.currentCard.id,
                 isselfcard: true
               }
               : c);
