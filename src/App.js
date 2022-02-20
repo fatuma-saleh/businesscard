@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { useState } from "react";
 
 import Application from "./components/Application";
 import CardShow from "./components/pages/CardShow";
@@ -7,6 +8,7 @@ import Layout from "./components/pages/Layout";
 import './App.css'
 
 function App() {
+  // const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
 
   return (
     <div className="App">

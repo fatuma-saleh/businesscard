@@ -1,9 +1,10 @@
 import { Fragment } from "react";
-export default function NavTop({currentUser,onClick,setCurrentUser}) {
+export default function NavTop({currentUser,onClick,setCurrentUser, setPage}) {
 
   const logout = function(){
     localStorage.removeItem('user')
     setCurrentUser(null)
+    setPage("Login")
   }
   return (
     <Fragment>

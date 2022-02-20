@@ -20,6 +20,7 @@ export default function Login(props) {
 
   return (
     <section className="login">
+      <h3>Login Page</h3>
       <form autoComplete="off" onSubmit={(event) => event.preventDefault()}>
         <table>
           <tr>

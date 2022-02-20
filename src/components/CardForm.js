@@ -3,8 +3,8 @@ import "./CardForm.scss";
 export default function CardForm(props) {
   return (
       <form onSubmit={props.handleSubmit} className="card-form">
-        {props.onCancel && <p>Edit Card</p>}
-        {!props.onCancel && <p>Create a New Card</p>}
+        {props.onCancel && <h1>Edit Card</h1>}
+        {!props.onCancel && <h1>Create a New Card</h1>}
         <table className="card-form-table">
           <tbody>
             <tr>

@@ -71,7 +71,12 @@ export default function Application(props) {
     <main>
 
       <nav>
-        <NavTop onClick={setPage} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <NavTop
+          onClick={setPage}
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+          setPage={setPage}
+        />
       </nav>
 
       <section className="main">
@@ -84,7 +89,7 @@ export default function Application(props) {
           <QR card={myCards[0]} />
         )} */}
 
-        {page === "MyCards" && myCards[0] && (
+        {page === "MyCards" && currentUser && myCards[0] && (
           <MyCards
             myCards={myCards}
             currentUser={currentUser}
@@ -94,8 +99,12 @@ export default function Application(props) {
           />
         )}
 
-        {page === "MyCards" && !myCards[0] && (
+        {page === "MyCards" && currentUser && !myCards[0] && (
           <p>You currently have no cards.</p>
+        )}
+
+        {page === "MyCards" && !currentUser && !myCards[0] && (
+          <Login />
         )}
 
         {page === "SavedCards" && savedCards[0] && (
