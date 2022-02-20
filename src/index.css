@@ -31,9 +31,13 @@
   padding: 4px;
   /* color: white; */
   font-size: 1em;
-  background-color: #d9c9cc;
+  background-color: #ffd6d8;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  border-color: #b13554;
+  color: #831a34;
 }
 
 .react-confirm-alert button:hover {
-  background-color: rgb(235, 153, 121);
+  background-color: #e6b1b4;
+  text-decoration: underline;
 }
