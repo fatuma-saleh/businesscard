@@ -12,13 +12,11 @@ export default function NavTop({currentUser,onClick,setCurrentUser, setPage}) {
         <>
           {" "}
           {/* < align=right>John's Home Page</P> */}
-           <p><b>Welcome {currentUser.first_name}!</b></p>
+          <p><b>Welcome {currentUser.first_name}!</b></p>
           <div className={"button-container"}>
           <button onClick={() => onClick("MainPage")}>Main Page</button>
           <button onClick={() => onClick("MyCards")}>My Cards</button>
-          <button onClick={() => onClick("SavedCards")}>
-            Saved Cards
-          </button>
+          <button onClick={() => onClick("SavedCards")}>Saved Cards</button>
           <button onClick={() => onClick("NewCard")}>New Card</button>
           <button onClick={() => onClick("")}>Template</button>
           {/* <button onClick={() => onClick("QR")}>QR Page example</button> */}

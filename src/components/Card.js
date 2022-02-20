@@ -20,6 +20,11 @@ export default function Card(props) {
     props.editCard(props.card)
   }
 
+  const handleSave = e => {
+    e.preventDefault();
+    props.saveCard(props.card)
+  }
+
   // const generateQrCode = () => {
   //   React.render(
   //     <QRCode value={`showcard/${props.card.id}`} size={128} />
@@ -97,31 +102,31 @@ export default function Card(props) {
             </table>
             
             <div className="card_options">
-              
-                {props.card.isselfcard && 
-                <>
-                  {/* <button className="display-button" onClick={() => setqrIsVisible(true)} > */}
-                  <button className="display-button" onClick={handleDisplay} >
-                    {/* <a href={`showcard/${props.card.id}`}>Display QR Code</a> */}
-                    {/* { <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
-                    {/* <Link to={`/showQR/${props.card.id}`} >Display QR Code</Link> */}
-                    Display QR Code
-                   </button>
-                 {/* {qrIsVisible && <QRCode value={`showcard/${props.card.id}`} size={128} />} */}
-                  </>
-                }
+              {props.card.isselfcard && 
+                <button className="display-button" onClick={handleDisplay} >
+                  Display QR Code
+                </button>
+              }
+              {props.saveCard && (
+                <div>
+                  <button className="display-button" onClick={handleSave} >
+                    SaveCard
+                  </button>
+                </div>
+              )
+              }
                 
-                <div className="card_edit-delete">
-                  {props.editCard &&
-                    <button className="edit-button" onClick={handleEdit}>
-                      <FontAwesomeIcon icon={faPenToSquare} className="icon-edit" />
-                    </button>
-                  }
-                  {props.deleteCard &&
-                    <button className="delete-button" onClick={handleDelete}>
-                      <FontAwesomeIcon icon={faTrashCan} className="icon-delete" />
-                    </button>
-                  }
+              <div className="card_edit-delete">
+                {props.editCard &&
+                  <button className="edit-button" onClick={handleEdit}>
+                    <FontAwesomeIcon icon={faPenToSquare} className="icon-edit" />
+                  </button>
+                }
+                {props.deleteCard &&
+                  <button className="delete-button" onClick={handleDelete}>
+                    <FontAwesomeIcon icon={faTrashCan} className="icon-delete" />
+                  </button>
+                }
               </div>
             </div>
           </div>
