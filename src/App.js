@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useParams} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Application from "./components/Application";
 import CardShow from "./components/pages/CardShow";

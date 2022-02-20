@@ -1,3 +1,5 @@
+import "./CardForm.scss";
+
 export default function CardForm(props) {
   return (
     <form onSubmit={props.handleSubmit} className="card-form">

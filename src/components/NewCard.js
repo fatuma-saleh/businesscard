@@ -1,8 +1,6 @@
 import { useState } from "react"
 import axios from "axios";
 
-import "./NewCard.scss"
-
 import { confirmAlert } from 'react-confirm-alert';
 
 import CardForm from "./CardForm";
