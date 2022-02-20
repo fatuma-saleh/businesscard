@@ -7,9 +7,14 @@
   font-size: 1.1em;
 }
 
+.card-form-button {
+  display: flex;
+  justify-content: center;
+}
+
 .card-form-submit,
 .card-form-cancel {
-  margin-top: 20px;
+  width: 5em;
   padding: 5px;
   font-size: 1em;
   background-color: #ffd6d8;
@@ -22,11 +27,6 @@
 .card-form-cancel:hover {
   background-color: #e6b1b4;
   text-decoration: underline;
-}
-
-.card-form-cancel {
-  background-color: red;
-  color: white;
 }
 
 .card-form-cancel:hover {

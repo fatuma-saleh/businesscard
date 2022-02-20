@@ -17,7 +17,7 @@ export default function Card(props) {
 
   const handleEdit = e => {
     e.preventDefault();
-    props.currentCard(props.card)
+    props.editCard(props.card)
   }
 
   // const generateQrCode = () => {
