@@ -4,9 +4,10 @@
   top: 50%;
   left: 40%;
   border-style: solid;
+  border-width: 4px;
   border-color: black;
   color: black;
-  background-color: red;
+  background-color: #d9c9cc;
   /* background-color: rgb(255, 0, 140); */
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -30,9 +31,9 @@
   padding: 4px;
   /* color: white; */
   font-size: 1em;
-  background-color: red;
+  background-color: #d9c9cc;
 }
 
 .react-confirm-alert button:hover {
-  background-color: rgb(255, 107, 107);
+  background-color: rgb(235, 153, 121);
 }
