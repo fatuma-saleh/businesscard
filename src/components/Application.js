@@ -13,13 +13,12 @@ import EditCard from "./EditCard";
 
 
 export default function Application(props) {
-  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
-  const [page, setPage] = useState("MainPage");
 
+  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')));
   const [myCards, setMyCards] = useState([]);
   const [savedCards, setSavedCards] = useState([]);
-  const [currentCard, setCurrentCard] = useState({});
-  
+  const [currentCard, setCurrentCard] = useState({});  
+  const [page, setPage] = useState("MyCards");
 
   // const getHeader = function () {
   //   // let user = localStorage.getItem('user');
@@ -95,9 +94,17 @@ export default function Application(props) {
           />
         )}
 
+        {page === "MyCards" && !myCards[0] && (
+          <p>You currently have no cards.</p>
+        )}
+
         {page === "SavedCards" && savedCards[0] && (
           <SavedCards savedCards={savedCards} />
         )}
+
+        {page === "SavedCards" && !savedCards[0] && (
+          <p>You currently have no saved cards.</p>
+          )}
 
         {page === "NewCard" && currentUser && (
           <NewCard
