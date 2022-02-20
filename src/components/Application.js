@@ -108,7 +108,11 @@ export default function Application(props) {
         )}
 
         {page === "SavedCards" && savedCards[0] && (
-          <SavedCards savedCards={savedCards} />
+          <SavedCards
+            savedCards={savedCards}
+            currentUser={currentUser}
+            setSavedCards={setSavedCards}
+          />
         )}
 
         {page === "SavedCards" && !savedCards[0] && (
