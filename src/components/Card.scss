@@ -20,8 +20,9 @@
 }
 
 .card_photo img {
-  width: 100px;
-  height: 150px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
 }
 
 .card_body {
