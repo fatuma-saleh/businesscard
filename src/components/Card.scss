@@ -1,6 +1,5 @@
 .card {
-  /* min-width: 300px; */
-  width: 100%;
+  min-width: 300px;
   height: auto;
   margin-top: 1em;
   display: flex;
@@ -8,58 +7,52 @@
   border-color: #bd685b;
   color: #b13554;
   background-color: rgb(255, 228, 236);
-  text-align: left;
+  text-align: middle;
+  justify-content: center;
+  align-items: center;
 }
 
-.card_photo {
+.card_left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 15px;
+}
+
+.card_photo {
+  margin: 1em;
+  flex-direction: column;
 }
 
 .card_photo img {
-  max-width: 200px;
+  max-width: 300px;
   width: auto;
   height: auto;
 }
 
 .card_body {
-  margin-left: 40px;
+  display: flex;
+  margin: 1em;
 }
 
-.card_options {
-  padding-top: 1.67em;
-  padding-bottom: 1.67em;
+.card_heading {
+  margin-bottom: 2em;
 }
 
-.card_edit-delete {
-  padding-top: 20px;
+.card_list {
+  display: flex;
+  flex-direction: column;
 }
 
-.card_options button {
-  padding: 5px;
-  font-size: 1em;
-  background-color: #ffd6d8;
-  font-family: Georgia, Times, 'Times New Roman', serif;
-  border-color: #b13554;
-}
-
-.card_options button:hover {
-  background-color: #e6b1b4;
-}
-
-.card_options button a {
-  color: #831a34;
-  text-decoration: none;
-}
-
-.card_options button a:hover {
-  text-decoration: underline;
+.card_list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+  min-width: 50px;
+  line-height: 1em;
 }
 
 .card_list-item a {
-  max-width: 50%;
   color: #b13554;
   text-decoration: none;
 }
@@ -73,28 +66,72 @@
   text-decoration: underline;
 }
 
-.card_edit-delete {
-  font-size: 1.2em;
+.icon-phone {
+  padding-right: 0.5em;
+  height: 1.5em;
 }
 
-.edit-button {
-  margin-right: 15px;
+.icon-at {
+  padding-right: 0.5em;
+  height: 1.5em;
+}
+
+.icon-social {
+  display: flex;
+  justify-content: space-around;
 }
 
 .icon-github {
+  width: 50px;
   color: black;
+  height: 2em;
 }
 
 .icon-linkedin {
+  width: 50px;
   color: #0a66c2;
+  height: 2em;
 }
 
 .icon-facebook {
+  width: 50px;
   color: #1b74e4;
+  height: 2em;
 }
 
 .icon-instagram {
-  color: #db3073;
+  width: 50px;
+  color: #941f4e;
+  height: 2em;
+}
+
+.card_bio {
+  max-width: 200px;
+}
+
+.card_bio p {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.card_options {
+  min-width: 15em;
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  justify-content: space-around;
+}
+
+.card_options button {
+  padding: 8px;
+  font-size: 1em;
+  background-color: #ffd6d8;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  border-color: #b13554;
+}
+
+.card_options button:hover {
+  background-color: #e6b1b4;
 }
 
 .icon-edit {
@@ -103,9 +140,4 @@
 
 .icon-delete {
   color: red;
-}
-
-td {
-  min-width: 25px;
-  line-height: 1.5;
 }
