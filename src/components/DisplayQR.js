@@ -4,7 +4,8 @@ const QRCode = require("qrcode.react");
 
 export default function DisplayQR(props) {
 
-  const url = `http://localhost:3000/showcard/${props.currentCard.id}`
+  const url = `https://adoring-volhard-7e0798.netlify.app/${props.currentCard.id}`
+  // const url = `http://localhost:3000/showcard/${props.currentCard.id}`
 
   const handleBack = e => {
     e.preventDefault();
