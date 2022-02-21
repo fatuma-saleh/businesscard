@@ -18,7 +18,7 @@ export default function NavTop({currentUser,onClick,setCurrentUser, setPage}) {
           <button onClick={() => onClick("MyCards")}>My Cards</button>
           <button onClick={() => onClick("SavedCards")}>Saved Cards</button>
           <button onClick={() => onClick("NewCard")}>New Card</button>
-          <button onClick={() => onClick("")}>Template</button>
+          {/* <button onClick={() => onClick("")}>Template</button> */}
           {/* <button onClick={() => onClick("QR")}>QR Page example</button> */}
           <button onClick={logout}>Logout</button>
           </div>
