@@ -11,7 +11,7 @@ export default function CardShowLogin(props) {
     e.preventDefault();
     // console.log("@@@@@", password)
    try {
-     const { data } = await axios.post("https://icard-api.herokuapp.com/api/login", { email, password })
+     const { data } = await axios.post("/api/login", { email, password })
      console.log("data++++", data)
      localStorage.setItem('user', JSON.stringify(data.user) );
      props.setCurrentUser(data.user)

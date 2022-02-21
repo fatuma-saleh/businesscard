@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://icard-api.herokuapp.com/api"
+  "proxy": "https://icard-api.herokuapp.com/"
 }

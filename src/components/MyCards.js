@@ -21,7 +21,7 @@ export default function MyCards(props) {
             const headers = {
               headers: { Authorization: `Bearer ${props.currentUser.token}`}
             };
-            return axios.delete(`https://icard-api.herokuapp.com/api/cards/${id}`, headers)
+            return axios.delete(`/api/cards/${id}`, headers)
             .then(r => {
               console.log(r.data)
               let newCards = props.myCards.filter(card => {

@@ -13,7 +13,7 @@ export default function CardShowCard (props) {
       const headers = {
         headers: { Authorization: `Bearer ${props.currentUser.token}`}
       };
-      return axios.post(`https://icard-api.herokuapp.com/api/usercards/${card.id}`, { card }, headers)
+      return axios.post(`/api/usercards/${card.id}`, { card }, headers)
       .then(r => {
         alert(r.data)
         navigate("/")

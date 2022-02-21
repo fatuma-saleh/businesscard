@@ -49,8 +49,8 @@ export default function Application(props) {
     };
     
     Promise.all([
-      axios.get("https://icard-api.herokuapp.com/api/mycards", headers),
-      axios.get("https://icard-api.herokuapp.com/api/savedcards", headers),
+      axios.get("/api/mycards", headers),
+      axios.get("/api/savedcards", headers),
     ])
     .then((all) => {
       setMyCards(all[0].data);
