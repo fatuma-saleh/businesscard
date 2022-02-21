@@ -21,7 +21,7 @@ export default function Login(props) {
 
   const onRegister = e => {
     e.preventDefault();
-    props.setPage("CardShowRegister")
+    props.setPage("Register")
   }
 
   return (
