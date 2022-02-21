@@ -105,6 +105,22 @@
   height: 2em;
 }
 
+.icon-github:hover {
+  background-color: #e6b1b4;
+}
+
+.icon-linkedin:hover {
+  background-color: #e6b1b4;
+}
+
+.icon-facebook:hover {
+  background-color: #e6b1b4;
+}
+
+.icon-instagram:hover {
+  background-color: #e6b1b4;
+}
+
 .card_bio {
   max-width: 200px;
 }
@@ -120,6 +136,10 @@
   background-color: #ffd6d8;
   font-family: Georgia, Times, 'Times New Roman', serif;
   border-color: #b13554;
+}
+
+.display-button:hover {
+  background-color: #e6b1b4;
 }
 
 .card_options {
