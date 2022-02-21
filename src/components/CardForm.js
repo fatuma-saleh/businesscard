@@ -46,9 +46,9 @@ export default function CardForm(props) {
                   />
                 </label>
               </td>
-            </tr>
-            <tr>
-              <p>Enter img url or leave blank</p>
+              <td>
+                <p>Enter img url or leave blank</p>
+              </td>
             </tr>
             <tr>
               <td>Title</td>
