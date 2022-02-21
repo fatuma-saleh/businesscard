@@ -29,7 +29,7 @@ export default function NewCard(props) {
             const headers = {
               headers: { Authorization: `Bearer ${props.currentUser.token}`}
             };
-            return axios.post("/api/cards", { card } , headers)
+            return axios.post("https://icard-api.herokuapp.com/api/cards", { card } , headers)
             .then(r => {
               let newCards = [
                 ...props.myCards,

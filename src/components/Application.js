@@ -47,17 +47,10 @@ export default function Application(props) {
     const headers = {
       headers: { Authorization: `Bearer ${currentUser.token}` },
     };
-
-    // console.log("herader__", headers);
-    // axios.get("http://localhost:8001/api/mycards", headers)
-    // .then(result => {
-    //   console.log("allll++", result);
-    //   setMyCards(result.data);
-    // })
     
     Promise.all([
-      axios.get("http://localhost:8001/api/mycards", headers),
-      axios.get("http://localhost:8001/api/savedcards", headers),
+      axios.get("https://icard-api.herokuapp.com/api/mycards", headers),
+      axios.get("https://icard-api.herokuapp.com/api/savedcards", headers),
     ])
     .then((all) => {
       setMyCards(all[0].data);

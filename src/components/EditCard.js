@@ -29,7 +29,7 @@ const handleSubmit = e => {
           const headers = {
             headers: { Authorization: `Bearer ${props.currentUser.token}`}
           };
-          return axios.put(`http://localhost:8001/api/cards/${props.currentCard.id}`, { card } , headers)
+          return axios.put(`https://icard-api.herokuapp.com/api/cards/${props.currentCard.id}`, { card } , headers)
           .then(r => {
             let newCards = props.myCards.map(c => c.id === props.currentCard.id
               ? {
