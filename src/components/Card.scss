@@ -114,8 +114,16 @@
   white-space: normal;
 }
 
+.display-button {
+  padding: 8px;
+  font-size: 1em;
+  background-color: #ffd6d8;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  border-color: #b13554;
+}
+
 .card_options {
-  min-width: 15em;
+  min-width: 10em;
   display: flex;
   flex-direction: row;
   margin: 1em;
