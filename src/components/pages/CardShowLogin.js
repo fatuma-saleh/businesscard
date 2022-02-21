@@ -33,7 +33,7 @@ export default function CardShowLogin(props) {
 
   return (
     <section className="login">
-      <h3>Login Page</h3>
+      <h1>Login to save card</h1>
       <form autoComplete="off" onSubmit={onLogin}>
         <table>
           <tr>
