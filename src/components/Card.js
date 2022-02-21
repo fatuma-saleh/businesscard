@@ -94,15 +94,15 @@ export default function Card(props) {
                 </div>
               }
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="card_options">
         {props.card.isselfcard && (
           <button className="display-button" onClick={handleDisplay} >
             Display QR Code
           </button>
         )}
+          </div>
+        </div>
+      </div>
+      <div className="card_options">
         {props.saveCard && (
           <div>
             <button className="display-button" onClick={handleSave} >
