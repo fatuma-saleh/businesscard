@@ -43,11 +43,9 @@ export default function CardForm(props) {
                     type="text"
                     defaultValue={props.card.photo}
                     onChange={props.handleChange}
+                    placeholder="Input img url"
                   />
                 </label>
-              </td>
-              <td>
-                <p>Enter img url or leave blank</p>
               </td>
             </tr>
             <tr>
