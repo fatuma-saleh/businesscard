@@ -45,6 +45,7 @@ export default function CardForm(props) {
                     onChange={props.handleChange}
                   />
                 </label>
+                <p>Enter img url or leave blank</p>
               </td>
             </tr>
             <tr>
