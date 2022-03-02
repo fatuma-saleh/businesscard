@@ -1,6 +1,6 @@
 # iCard App
 
-iCard is a single-page application (SPA) that allows users to create digital business cards, and share it to others through an auto generated QR code. The front end of this project is built with `React` and makes requests to an API to fetch and store appointment data from a database.
+iCard is a single-page application (SPA) that allows users to create digital business cards, and share it to others through an auto generated QR code. The front end of this project is built with `React` and makes requests to an API to fetch and store useer's data from a database
 
 ## Setup
 
@@ -18,3 +18,4 @@ Go to [iCard](https://adoring-volhard-7e0798.netlify.app/) and enjoy
 - "react-scripts": "5.0.0"
 - "sass": "^1.49.7"
 - "web-vitals": "^2.1.4"
+
