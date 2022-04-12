@@ -6,8 +6,8 @@ iCard is a single-page application (SPA) that allows users to create digital bus
 
 Go to [iCard](https://adoring-volhard-7e0798.netlify.app/) and have a look at the app using
  
-username:laila
-password:pass 
+### username:laila
+### password:pass 
 or register as a new user and enjoy!
 
 
